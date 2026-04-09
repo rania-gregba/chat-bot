@@ -1,0 +1,106 @@
+<div class="content-scroll animate-fade">
+  <header class="main-header glass-panel mb-24">
+    <div class="h-left">
+      <button class="icon-btn-sm" (click)="goBack()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <div class="h-meta">
+        <h1>Gestion des Salles</h1>
+        <span class="h-status">{{ salles.length }} salles répertoriées</span>
+      </div>
+    </div>
+    <button class="btn-submit" style="width: auto; padding: 10px 20px; margin: 0;" (click)="openAdd()">
+      <span class="btn-content">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Nouvelle Salle
+      </span>
+    </button>
+  </header>
+
+  <!-- Alerts -->
+  <div class="error-msg mb-24" *ngIf="errorMessage">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    {{ errorMessage }}
+  </div>
+  <div class="success-msg mb-24" *ngIf="successMessage">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    {{ successMessage }}
+  </div>
+
+  <!-- Form Panel -->
+  <div class="data-card animate-fade mb-24" *ngIf="showForm">
+    <div class="panel-header" style="padding: 0 0 20px 0; margin-bottom: 24px;">
+      <h3 style="margin: 0;">{{ editMode ? 'Modifier' : 'Ajouter' }} une salle</h3>
+    </div>
+    
+    <div class="grid-2">
+      <div class="form-group">
+        <label class="field-label">Nom de la salle</label>
+        <input type="text" class="field-input" [(ngModel)]="nom" placeholder="Ex: Amphi A, Salle 101">
+      </div>
+      <div class="form-group">
+        <label class="field-label">Code / ID</label>
+        <input type="text" class="field-input" [(ngModel)]="code" placeholder="Ex: S-101">
+      </div>
+      <div class="form-group mt-10">
+        <label class="field-label">Type de salle</label>
+        <select class="field-select" [(ngModel)]="type">
+          <option value="AMPHI">Amphithéâtre</option>
+          <option value="SALLE_COURS">Salle de cours</option>
+          <option value="LABO">Laboratoire / TP</option>
+        </select>
+      </div>
+      <div class="form-group mt-10">
+        <label class="field-label">Capacité (personnes)</label>
+        <input type="number" class="field-input" [(ngModel)]="capacite" placeholder="Ex: 50">
+      </div>
+    </div>
+
+    <div class="form-row mt-20" style="padding-top: 24px; border-top: 1px solid var(--border-light); display: flex; justify-content: flex-end; gap: 12px;">
+      <button class="action-btn" (click)="cancel()">Annuler</button>
+      <button class="btn-submit" style="width: auto; margin: 0;" (click)="save()">Sauvegarder</button>
+    </div>
+  </div>
+
+  <!-- Data Table -->
+  <div class="data-card animate-fade">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Code</th>
+            <th>Type</th>
+            <th>Capacité</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of salles">
+            <td><strong>{{ s.nom }}</strong></td>
+            <td><code class="badge badge-blue">{{ s.code }}</code></td>
+            <td>
+              <span class="badge" [ngClass]="s.type === 'AMPHI' ? 'badge-purple' : s.type === 'LABO' ? 'badge-amber' : 'badge-green'">
+                {{ s.type === 'AMPHI' ? 'Amphithéâtre' : s.type === 'LABO' ? 'Laboratoire' : 'Salle de cours' }}
+              </span>
+            </td>
+            <td>{{ s.capacite || '—' }} pers.</td>
+            <td>
+              <div class="msg-actions">
+                <button class="m-btn" (click)="openEdit(s)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                </button>
+                <button class="m-btn" style="color: var(--danger);" (click)="deleteSalle(s.id)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr *ngIf="salles.length === 0">
+            <td colspan="5" style="text-align: center; padding: 40px; color: var(--text-dim);">Aucune salle répertoriée</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

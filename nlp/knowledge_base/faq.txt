@@ -1,0 +1,228 @@
+═══════════════════════════════════════════════════════════
+            QUESTIONS FRÉQUEMMENT POSÉES (FAQ)
+         Faculté Privée des Sciences et Technologies
+═══════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────
+📚 INSCRIPTION & ADMISSION
+────────────────────────────────────────────────────────
+
+Q: Comment s'inscrire à la faculté ?
+R: L'inscription se fait en ligne via notre plateforme ou en personne au bureau des inscriptions (Bureau 101, Bâtiment A). Les étapes sont :
+   1. Remplir le formulaire d'inscription en ligne
+   2. Déposer le dossier complet (copies diplômes, photos, CIN, relevés de notes)
+   3. Payer les frais de scolarité (1er versement)
+   4. Recevoir la carte d'étudiant et l'accès à la plateforme
+
+Q: Quels sont les documents requis pour l'inscription ?
+R: Le dossier d'inscription comprend :
+   - 2 photos d'identité récentes
+   - Copie de la CIN (ou passeport pour les étrangers)
+   - Copie certifiée du baccalauréat
+   - Relevés de notes des années précédentes
+   - Formulaire d'inscription rempli et signé
+   - Reçu de paiement des frais de scolarité
+
+Q: Quels sont les frais de scolarité ?
+R: Les frais de scolarité varient selon la filière :
+   - Licence (toutes spécialités) : 4 500 DT / an
+   - Master : 5 500 DT / an
+   - Le paiement peut se faire en 3 tranches :
+     • 1ère tranche : Septembre (40%)
+     • 2ème tranche : Janvier (30%)
+     • 3ème tranche : Avril (30%)
+   - Réduction de 10% pour paiement intégral à l'inscription
+   - Bourses d'excellence disponibles pour les meilleurs étudiants
+
+Q: Quelles sont les dates limites d'inscription ?
+R: Le calendrier d'inscription est le suivant :
+   - Inscription Licence 1 : 01 Juillet — 30 Septembre
+   - Réinscription Licence 2/3 : 01 — 30 Septembre
+   - Inscription Master : 01 — 15 Octobre
+   - Inscription tardive (avec majoration 15%) : jusqu'au 31 Octobre
+
+Q: Peut-on transférer d'une autre université ?
+R: Oui, les transferts sont possibles sous conditions :
+   - Demande écrite au doyen avec motif du transfert
+   - Dossier académique complet de l'université d'origine
+   - Moyenne minimale de 10/20
+   - Commission de validation statue sous 15 jours
+
+────────────────────────────────────────────────────────
+📄 DOCUMENTS ADMINISTRATIFS
+────────────────────────────────────────────────────────
+
+Q: Comment obtenir une attestation de scolarité ?
+R: Vous pouvez obtenir une attestation de scolarité de deux façons :
+   1. Via le chatbot : tapez "attestation de scolarité" et remplissez le formulaire
+   2. Au secrétariat : Bâtiment A, RDC — Délai 24-48h
+   L'attestation est gratuite pour les étudiants inscrits.
+
+Q: Comment obtenir un relevé de notes ?
+R: Le relevé de notes est disponible :
+   - En ligne via votre espace étudiant après la publication des résultats
+   - Au secrétariat sur demande (délai 48h)
+   - Le relevé officiel tamponné est délivré uniquement au secrétariat
+
+Q: Comment obtenir une lettre de recommandation ?
+R: Pour obtenir une lettre de recommandation :
+   1. Adressez une demande écrite au professeur concerné
+   2. Joignez votre CV et vos relevés de notes
+   3. Précisez l'objet (stage, master, emploi)
+   4. Délai habituel : 1 semaine
+
+Q: Quels documents peut générer le chatbot ?
+R: Le chatbot peut générer automatiquement :
+   - Attestation de scolarité (PDF et Word)
+   - Attestation de travail (pour le personnel)
+   - Attestation de résidence
+   - Certificat d'inscription
+   Tous les documents sont pré-remplis avec vos informations.
+
+────────────────────────────────────────────────────────
+📅 EMPLOI DU TEMPS & EXAMENS
+────────────────────────────────────────────────────────
+
+Q: Où consulter mon emploi du temps ?
+R: Votre emploi du temps est disponible :
+   - Sur la page "Planning" de cette application
+   - Affiché sur les panneaux du hall principal
+   - Envoyé par email au début de chaque semestre
+   Sélectionnez votre filière pour voir votre programme.
+
+Q: Comment se déroulent les examens ?
+R: Le système d'examens comprend :
+   - Contrôle continu : 40% de la note finale (devoirs, projets, participation)
+   - Examen partiel : mi-semestre (20%)
+   - Examen final : fin de semestre (40%)
+   - Session de rattrapage : 2 semaines après la session principale
+   Le calendrier des examens est publié 3 semaines avant la session.
+
+Q: Quelle est la note minimale pour valider un module ?
+R: La note minimale de validation est de 10/20. Conditions de passage :
+   - Moyenne générale ≥ 10/20
+   - Aucune note éliminatoire (< 5/20)
+   - Validation de tous les modules obligatoires
+   - Le rattrapage est possible pour les modules non validés
+
+Q: Que faire en cas d'absence à un examen ?
+R: En cas d'absence à un examen :
+   - Justifiée (maladie avec certificat) : accès au rattrapage automatique
+   - Non justifiée : note de 0/20 attribuée
+   - L'absence doit être signalée dans les 48h au secrétariat
+   - Le certificat médical doit être déposé dans les 72h
+
+────────────────────────────────────────────────────────
+🎓 FILIÈRES & PROGRAMMES
+────────────────────────────────────────────────────────
+
+Q: Quelles filières sont proposées ?
+R: Notre faculté propose les filières suivantes :
+
+   LICENCES (3 ans) :
+   • Informatique de Gestion (IG)
+   • Génie Logiciel (GL)
+   • Systèmes d'Information (SI)
+   • Réseaux et Télécommunications (RT)
+   • Sciences de Gestion (SG)
+   • Marketing Digital (MD)
+
+   MASTERS (2 ans) :
+   • Intelligence Artificielle et Data Science (IADS)
+   • Cybersécurité (CS)
+   • Management des Systèmes d'Information (MSI)
+   • Finance et Comptabilité (FC)
+
+Q: Peut-on changer de filière en cours d'année ?
+R: Le changement de filière est possible :
+   - Uniquement pendant le 1er mois du 1er semestre
+   - Avec l'accord du responsable de filière
+   - Sous réserve de places disponibles
+   - Formulaire de changement à retirer au secrétariat
+
+Q: Quels sont les stages obligatoires ?
+R: Les stages sont obligatoires pour certains niveaux :
+   - Licence 2 : Stage d'observation (1 mois — Été)
+   - Licence 3 : Stage de fin d'études (2 mois — PFE)
+   - Master 2 : Stage professionnel (4-6 mois — Mémoire)
+   Le bureau des stages (Bureau 203) accompagne les étudiants.
+
+────────────────────────────────────────────────────────
+🏫 VIE ÉTUDIANTE
+────────────────────────────────────────────────────────
+
+Q: Quels sont les clubs et activités disponibles ?
+R: La faculté dispose de plusieurs clubs :
+   - Club Informatique : ateliers, hackathons, coding challenges
+   - Club Culturel : théâtre, musique, arts
+   - Club Sportif : football, basketball, volleyball
+   - Club Entrepreneuriat : concours de startups, mentorat
+   - Club Débat : compétitions nationales et internationales
+   Inscription aux clubs : gratuite, via le bureau de la vie étudiante.
+
+Q: Y a-t-il une bibliothèque ?
+R: Oui, la bibliothèque universitaire est ouverte :
+   - Lun-Ven : 08h00 — 20h00
+   - Samedi : 08h00 — 14h00
+   - Plus de 15 000 ouvrages et accès aux bases de données numériques
+   - Salle de lecture silencieuse (50 places)
+   - Espace de travail en groupe (20 places)
+   - Accès WiFi haut débit
+
+Q: Y a-t-il un parking ?
+R: Oui, la faculté dispose de :
+   - Parking gratuit pour les étudiants (200 places)
+   - Parking réservé au personnel enseignant (50 places)
+   - Parking pour personnes à mobilité réduite (10 places)
+
+Q: Y a-t-il une cafétéria ?
+R: Oui, la cafétéria est située au rez-de-chaussée du Bâtiment B :
+   - Ouverture : 07h30 — 17h00
+   - Menu du jour : 3.5 DT (plat + boisson)
+   - Options végétariennes disponibles
+   - Distributeurs automatiques 24/7 dans le hall
+
+────────────────────────────────────────────────────────
+💻 SUPPORT TECHNIQUE
+────────────────────────────────────────────────────────
+
+Q: Comment accéder au WiFi de la faculté ?
+R: Pour se connecter au WiFi :
+   - Réseau : FPST-WiFi
+   - Identifiant : votre numéro d'étudiant
+   - Mot de passe : fourni à l'inscription
+   - En cas de problème : support@fpst.tn ou Bureau 304
+
+Q: Comment accéder à la plateforme e-learning ?
+R: La plateforme e-learning est accessible à :
+   - URL : https://elearning.fpst.tn
+   - Identifiants : même login que le WiFi
+   - Contenu : cours, TD, TP, annonces, dépôt de devoirs
+   - Application mobile disponible (iOS & Android)
+
+Q: J'ai un problème technique, que faire ?
+R: Pour tout problème technique :
+   1. Vérifiez les annonces sur la page d'accueil
+   2. Contactez le support : support@fpst.tn
+   3. Ou passez au Bureau 304, Bâtiment A
+   4. Horaires support : Lun-Ven 09h00-17h00
+
+────────────────────────────────────────────────────────
+💼 STAGES & EMPLOI
+────────────────────────────────────────────────────────
+
+Q: Comment trouver un stage ?
+R: Plusieurs canaux pour trouver un stage :
+   - Bureau des stages (Bureau 203) : offres partenaires
+   - Plateforme en ligne : stages.fpst.tn
+   - Forum annuel entreprises-étudiants (Mars)
+   - Réseau Alumni FPST
+   - Convention de stage fournie par la faculté
+
+Q: La faculté aide-t-elle à l'insertion professionnelle ?
+R: Oui, la faculté dispose d'un service carrières qui offre :
+   - Ateliers CV et lettre de motivation
+   - Simulations d'entretiens
+   - Job dating avec les entreprises partenaires
+   - Coaching personnalisé
+   - Réseau de plus de 50 entreprises partenaires

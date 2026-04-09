@@ -1,0 +1,164 @@
+<div class="planning-container">
+  <!-- Header -->
+  <header class="planning-header">
+    <div class="header-left">
+      <h1>📅 Emploi du Temps</h1>
+      <span class="subtitle" *ngIf="getFiliereNom()">{{ getFiliereNom() }}</span>
+    </div>
+    <div class="header-actions">
+      <button class="btn-nav" (click)="goToChat()">💬 Chat</button>
+      <button class="btn-nav" *ngIf="role === 'ADMIN'" (click)="goToAdmin()">⚙️ Admin</button>
+      <button class="btn-logout" (click)="logout()">🚪 Déconnexion</button>
+    </div>
+  </header>
+
+  <!-- Control Bar (Admin only) -->
+  <div class="control-bar" *ngIf="role === 'ADMIN'">
+    <div class="view-toggle">
+      <button [class.active]="viewMode === 'FILIERE'" (click)="setViewMode('FILIERE')">📚 Par Filière</button>
+      <button [class.active]="viewMode === 'PROFESSEUR'" (click)="setViewMode('PROFESSEUR')">👨‍🏫 Par Enseignant</button>
+    </div>
+  </div>
+
+  <!-- Filière Selector -->
+  <div class="filter-bar" *ngIf="role !== 'PROFESSEUR'">
+    <!-- Filière Selection -->
+    <div class="filter-group" *ngIf="viewMode === 'FILIERE' && role === 'ADMIN'">
+      <label>📚 Sélectionner Filière :</label>
+      <select [(ngModel)]="selectedFiliereId" (change)="onFiliereChange()">
+        <option *ngFor="let f of filieres" [ngValue]="f.id">{{ f.nom }} — {{ f.niveau }}</option>
+      </select>
+    </div>
+
+    <!-- Professeur Selection -->
+    <div class="filter-group" *ngIf="viewMode === 'PROFESSEUR' && role === 'ADMIN'">
+      <label>👨‍🏫 Sélectionner Enseignant :</label>
+      <select [(ngModel)]="selectedProfesseurId" (change)="onProfesseurChange()">
+        <option *ngFor="let p of professeurs" [ngValue]="p.id">Pr. {{ p.firstName }} {{ p.lastName }}</option>
+      </select>
+    </div>
+
+    <div class="filter-group" *ngIf="role === 'USER'">
+      <label>📚 Ma Filière :</label>
+      <strong>{{ getFiliereNom() }}</strong>
+    </div>
+
+    <!-- Actions Admin -->
+    <div class="admin-actions" *ngIf="role === 'ADMIN'">
+      <button class="btn-generate" (click)="genererPlanningAuto()" [disabled]="isGenerating || viewMode !== 'FILIERE'">
+        <span *ngIf="!isGenerating">🪄 Générer Auto</span>
+        <span *ngIf="isGenerating">⏳...</span>
+      </button>
+      <button class="btn-add-manual" (click)="isAddingSlot = !isAddingSlot">
+        {{ isAddingSlot ? '❌ Fermer' : '➕ Ajout Manuel' }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Manual Slot Form (Admin) -->
+  <div class="manual-form-overlay" *ngIf="isAddingSlot && role === 'ADMIN'">
+    <div class="manual-form-card">
+      <h3>➕ Ajouter un créneau manuel</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Jour</label>
+          <select [(ngModel)]="newSlot.jour">
+            <option *ngFor="let j of jours" [value]="j">{{ j }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Début</label>
+          <select [(ngModel)]="newSlot.heureDebut">
+            <option *ngFor="let h of heures" [value]="h">{{ h }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Fin (ex: +1h30)</label>
+          <input type="time" [(ngModel)]="newSlot.heureFin" />
+        </div>
+        <div class="form-group">
+          <label>Matière</label>
+          <select [(ngModel)]="newSlot.matiereId">
+            <option *ngFor="let m of matieres" [value]="m.id">{{ m.nom }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Salle</label>
+          <select [(ngModel)]="newSlot.salleId">
+            <option *ngFor="let s of salles" [value]="s.id">{{ s.nom }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Filière</label>
+          <select [(ngModel)]="newSlot.filiereId">
+            <option *ngFor="let f of filieres" [value]="f.id">{{ f.nom }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Enseignant (Optionnel)</label>
+          <select [(ngModel)]="newSlot.professeurId">
+            <option value="">Aucun</option>
+            <option *ngFor="let p of professeurs" [value]="p.id">{{ p.lastName }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Groupe</label>
+          <input type="text" [(ngModel)]="newSlot.groupe" placeholder="Ex: Groupe B" />
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="btn-cancel" (click)="isAddingSlot = false">Annuler</button>
+        <button class="btn-save" (click)="ajouterCreneauManuel()">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div class="loading" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Chargement du planning...</p>
+  </div>
+
+  <!-- Empty state -->
+  <div class="empty-state" *ngIf="!isLoading && creneaux.length === 0">
+    <span class="empty-icon">📋</span>
+    <h3>Aucun créneau programmé</h3>
+    <p>Le planning pour cette filière est vide. Contactez l'administration.</p>
+  </div>
+
+  <!-- Planning Grid -->
+  <div class="planning-grid" *ngIf="!isLoading && creneaux.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th class="hour-col">Heure</th>
+          <th *ngFor="let jour of jours" class="day-col">{{ jour }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let heure of heures">
+          <td class="hour-cell">{{ heure }}</td>
+          <td *ngFor="let jour of jours" class="slot-cell">
+            <div class="creneau-card"
+                 *ngIf="getCreneauPourCase(jour, heure) as creneau"
+                 [ngClass]="'type-' + (creneau.matiere?.type || 'CM').toLowerCase()">
+              <div class="creneau-matiere">{{ creneau.matiere?.nom }}</div>
+              <div class="creneau-info">
+                <span class="creneau-salle">🏫 {{ creneau.salle?.nom }}</span>
+                <span class="creneau-prof" *ngIf="creneau.professeur">
+                  👨‍🏫 {{ creneau.professeur.firstName }} {{ creneau.professeur.lastName }}
+                </span>
+              </div>
+              <div class="creneau-time">
+                {{ creneau.heureDebut?.substring(0,5) }} - {{ creneau.heureFin?.substring(0,5) }}
+              </div>
+              <span class="creneau-type">{{ creneau.matiere?.type }}</span>
+              <button class="btn-delete" *ngIf="role === 'ADMIN'"
+                      (click)="supprimerCreneau(creneau.id)">✕</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

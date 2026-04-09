@@ -1,0 +1,26 @@
+# Angular
+node_modules/
+dist/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# NLP
+nlp/venv/
+nlp/chroma_db/
+
+# Java (Spring Boot)
+target/
+
+# Env
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

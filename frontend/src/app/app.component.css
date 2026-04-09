@@ -1,0 +1,23 @@
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page transitions */
+:host ::ng-deep router-outlet ~ * {
+  animation: pageSlideIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes pageSlideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+[dir="rtl"] .app-content {
+  direction: rtl;
+}

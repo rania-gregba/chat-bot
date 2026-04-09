@@ -1,0 +1,130 @@
+═══════════════════════════════════════════════════════════
+            GUIDE DES INFRASTRUCTURES ET SALLES
+         Faculté Privée des Sciences et Technologies
+═══════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────
+🏢 BÂTIMENT A — ADMINISTRATION & ENSEIGNEMENT
+────────────────────────────────────────────────────────
+
+RDC (Rez-de-chaussée) :
+  • Hall d'accueil et réception
+  • Secrétariat général (secretariat@fpst.tn)
+  • Bureau 101 : Service des inscriptions
+  • Bureau 105 : Service des examens
+  • Bureau 110 : Bureau de la vie étudiante
+  • Salle A001 : Salle de conférences (100 places, projecteur HD, micro)
+  • Distributeurs automatiques
+
+1er étage :
+  • Salle A101 : Amphithéâtre principal (200 places, équipé vidéo)
+  • Salle A102 : Amphithéâtre secondaire (120 places)
+  • Salle A103 — A106 : Salles TD (40 places chacune, tableaux blancs)
+  • Bureau du Doyen
+
+2ème étage :
+  • Bureau 201 : Service RH (rh@fpst.tn)
+  • Bureau 203 : Bureau des stages (stages@fpst.tn)
+  • Salle A201 — A204 : Salles de cours (35 places chacune)
+  • Salle A205 : Salle de réunion enseignants (20 places)
+  • Bureau 210 : Direction des études
+
+3ème étage :
+  • Bureau 304 : Support technique IT (support@fpst.tn)
+  • Salle A301 — A304 : Salles informatiques (voir détails ci-dessous)
+  • Bureau des responsables de filières
+
+────────────────────────────────────────────────────────
+🏢 BÂTIMENT B — SCIENCES ET VIE ÉTUDIANTE
+────────────────────────────────────────────────────────
+
+RDC :
+  • Cafétéria (07h30-17h00)
+  • Espace détente étudiants
+  • Club house des associations
+
+1er étage :
+  • Salle B101 — B104 : Laboratoires de sciences
+  • Salle B105 : Laboratoire de physique
+  • Salle B106 : Laboratoire de chimie (équipement spécialisé)
+
+2ème étage :
+  • Bibliothèque universitaire (08h00-20h00)
+    - Salle de lecture silencieuse (50 places)
+    - Espace travail en groupe (20 places)
+    - 15 000+ ouvrages, accès bases numériques
+    - Accès IEEE, Springer, ScienceDirect
+
+────────────────────────────────────────────────────────
+💻 DÉTAIL DES SALLES INFORMATIQUES
+────────────────────────────────────────────────────────
+
+SALLE A301 — Salle Info 1
+  • Capacité : 30 postes
+  • Équipement : PC i7, 16 Go RAM, écran 24"
+  • Logiciels : VS Code, IntelliJ, Eclipse, Docker, Git
+  • Projecteur HD + tableau interactif
+  • Réseau : 1 Gbps
+
+SALLE A302 — Salle Info 2
+  • Capacité : 30 postes
+  • Équipement : PC i5, 8 Go RAM, écran 22"
+  • Logiciels : Android Studio, Xcode (Mac), Flutter
+  • Projecteur HD
+  • Réseau : 1 Gbps
+
+SALLE A303 — Laboratoire Réseaux (Cisco Lab)
+  • Capacité : 20 postes + 15 switchs/routeurs Cisco
+  • Équipement : Packet Tracer, GNS3, Wireshark
+  • Baies de brassage pédagogiques
+  • Câbles et équipements de câblage
+
+SALLE A304 — Laboratoire IA & Data Science
+  • Capacité : 25 postes
+  • Équipement : Workstations GPU (NVIDIA RTX 3080)
+  • Logiciels : Python, Jupyter, TensorFlow, PyTorch
+  • Serveur de calcul dédié (4x GPU A100)
+  • Réseau : 10 Gbps
+
+────────────────────────────────────────────────────────
+📐 CAPACITÉ DES SALLES — RÉSUMÉ
+────────────────────────────────────────────────────────
+
+  Amphithéâtre A101    : 200 places  | Type : AMPHI
+  Amphithéâtre A102    : 120 places  | Type : AMPHI
+  Salle conférence A001: 100 places  | Type : SALLE_REUNION
+  Salles TD A103-A106  : 40 places   | Type : SALLE_TD
+  Salles cours A201-A204: 35 places  | Type : SALLE_TD
+  Salle info A301      : 30 postes   | Type : SALLE_INFO
+  Salle info A302      : 30 postes   | Type : SALLE_INFO
+  Lab réseaux A303     : 20 postes   | Type : LABO
+  Lab IA A304          : 25 postes   | Type : LABO
+  Labs sciences B101-B104: 25 places | Type : LABO
+  Bibliothèque lecture : 50 places
+  Bibliothèque groupes : 20 places
+
+  TOTAL : Plus de 700 places assises
+
+────────────────────────────────────────────────────────
+🅿️ ACCÈS ET PARKING
+────────────────────────────────────────────────────────
+
+  • Adresse : Zone Industrielle, Rue des Sciences, Tunis
+  • Bus : Lignes 45, 67 (arrêt Faculté FPST)
+  • Métro léger : Station Ibn Khaldoun (10 min à pied)
+  • Parking étudiants : 200 places (gratuit, badge requis)
+  • Parking enseignants : 50 places (réservé)
+  • Parking PMR : 10 places (priorité)
+  • Parc vélos : 30 emplacements (couvert)
+
+────────────────────────────────────────────────────────
+🔧 ÉQUIPEMENTS SPÉCIAUX DISPONIBLES
+────────────────────────────────────────────────────────
+
+  • WiFi haut débit dans tout le campus (FPST-WiFi)
+  • Imprimantes/photocopieuses : Hall Bât. A et Bibliothèque
+    (0.05 DT/page N&B, 0.20 DT/page couleur)
+  • Casiers étudiants : RDC Bât. B (demande au Bureau 110)
+  • Salle de prière : RDC Bât. B
+  • Infirmerie : RDC Bât. A (08h30-16h30)
+  • Accessible PMR : ascenseurs et rampes dans tous les bâtiments

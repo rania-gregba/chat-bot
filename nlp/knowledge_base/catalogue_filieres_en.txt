@@ -1,0 +1,96 @@
+═══════════════════════════════════════════════════════════
+              PROGRAM CATALOG
+          Private Faculty of Sciences and Technologies
+═══════════════════════════════════════════════════════════
+
+BACHELOR'S PROGRAMS (3 years — LMD system)
+
+────────────────────────────────────────────────────────
+🖥️ COMPUTER SCIENCE (CS)
+────────────────────────────────────────────────────────
+
+YEAR 1 (Common Core): Programming (Python, C), Mathematics, Algorithms, Databases (SQL), English, Communication
+YEAR 2: Object-Oriented Programming (Java), Data Structures, Operating Systems, Web Development, Networks
+YEAR 3: Software Engineering, Mobile Development, AI & Machine Learning Intro, Cloud Computing, Final Project (PFE)
+Career paths: Developer, Systems Admin, IT Analyst, Junior Data Analyst
+
+────────────────────────────────────────────────────────
+🔧 SOFTWARE ENGINEERING (SE)
+────────────────────────────────────────────────────────
+
+YEAR 1: Same as CS
+YEAR 2: Software Engineering, Design Patterns, Agile Methods, Testing & QA, UML & Modeling
+YEAR 3: Architecture & Microservices, DevOps & CI/CD, Cloud Native Development, Project Management, PFE
+Career paths: Software Engineer, Full-Stack Developer, DevOps Engineer, QA Engineer
+
+────────────────────────────────────────────────────────
+🌐 NETWORKS & TELECOMMUNICATIONS (NT)
+────────────────────────────────────────────────────────
+
+YEAR 1: Same as CS
+YEAR 2: Network Protocols (TCP/IP), Cisco Routing & Switching, Linux System Admin, VoIP
+YEAR 3: Network Security, Wireless & 5G, Cloud Infrastructure, Virtualization, PFE
+Career paths: Network Admin, Systems Engineer, Telecom Engineer, Cloud Infrastructure
+
+────────────────────────────────────────────────────────
+📊 MANAGEMENT SCIENCES (MS)
+────────────────────────────────────────────────────────
+
+YEAR 1: Introduction to Management, Micro/Macroeconomics, Accounting, Management IT, Statistics
+YEAR 2: Marketing, Financial Analysis, Human Resources, Commercial Law, Business English
+YEAR 3: Strategic Management, International Trade, Business ERP, Entrepreneurship, PFE
+Career paths: Project Manager, HR Manager, Financial Analyst, Consultant
+
+────────────────────────────────────────────────────────
+📱 DIGITAL MARKETING (DM)
+────────────────────────────────────────────────────────
+
+YEAR 1: Marketing Fundamentals, Digital Communication, Web Design, Statistics, English
+YEAR 2: Social Media Marketing, SEO/SEA, Content Marketing, E-commerce, Data Analytics
+YEAR 3: Growth Hacking, Marketing Automation, Brand Strategy, Digital Advertising, PFE
+Career paths: Digital Marketing Manager, Community Manager, SEO Specialist, Growth Hacker
+
+────────────────────────────────────────────────────────
+💻 INFORMATION SYSTEMS (IS)
+────────────────────────────────────────────────────────
+
+YEAR 1: Common core (CS/IS)
+YEAR 2: Information System Design, ERP, BI & Data Warehousing, IT Governance
+YEAR 3: Business Intelligence, Big Data Intro, IS Security, IT Project Management, PFE
+Career paths: BI Consultant, Functional Analyst, IS Architect, IT Project Manager
+
+═══════════════════════════════════════════════════════════
+MASTER'S PROGRAMS (2 years)
+═══════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────
+🤖 AI & DATA SCIENCE (IADS)
+────────────────────────────────────────────────────────
+
+M1: Deep Learning, Python for Data Science, Statistical Analysis, Big Data (Hadoop/Spark), NLP
+M2: Advanced AI, Computer Vision, MLOps, Research Methodology, Professional Internship (6 months)
+Career paths: Data Scientist, ML Engineer, AI Researcher, NLP Specialist
+
+────────────────────────────────────────────────────────
+🔒 CYBERSECURITY (CS)
+────────────────────────────────────────────────────────
+
+M1: Network Security, Cryptography, Ethical Hacking, Digital Forensics, Security Standards (ISO 27001)
+M2: Advanced Penetration Testing, SOC & SIEM, Cloud Security, Incident Response, Internship
+Career paths: Security Engineer, Pentesting, SOC Analyst, CISO, Cybersecurity Consultant
+
+────────────────────────────────────────────────────────
+📈 MANAGEMENT INFORMATION SYSTEMS (MIS)
+────────────────────────────────────────────────────────
+
+M1: IS Strategy, ERP Implementation, IT Governance (COBIT/ITIL), Digital Transformation
+M2: Innovation Management, IS Audit, IT Change Management, Strategic BI, Internship
+Career paths: IT Consultant, IS Director, CTO, IT Transformation Manager
+
+────────────────────────────────────────────────────────
+💼 FINANCE & ACCOUNTING (FA)
+────────────────────────────────────────────────────────
+
+M1: International Accounting Standards (IFRS), Financial Audit, Risk Management, Financial Econometrics
+M2: Portfolio Management, FinTech, Islamic Finance, Corporate Finance, Internship
+Career paths: Financial Auditor, Portfolio Manager, Financial Analyst, CFO

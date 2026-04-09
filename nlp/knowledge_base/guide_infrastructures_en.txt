@@ -1,0 +1,69 @@
+═══════════════════════════════════════════════════════════
+              CAMPUS INFRASTRUCTURE GUIDE
+          Private Faculty of Sciences and Technologies
+═══════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────
+🏫 BUILDING A — MAIN BUILDING
+────────────────────────────────────────────────────────
+
+GROUND FLOOR:
+  • Secretary's Office (Office 100): Mon-Fri 08:30-16:30
+  • Registration Office (Office 101)
+  • Finance Office (Office 103)
+  • Exam Office (Office 105)
+  • Complaint Office (Office 110)
+  • Main Lobby with Information Screens
+
+1ST FLOOR:
+  • Amphitheater A101 — Capacity 200
+  • Amphitheater A102 — Capacity 120
+  • TD Rooms A103, A104, A105, A106 — 40 seats each
+  • Faculty Rooms A107-A110
+
+2ND FLOOR:
+  • Dean's Office (Office 200)
+  • HR Office (Office 201)
+  • Internship Office (Office 203)
+  • Meeting Room A201 — 30 seats
+
+3RD FLOOR:
+  • Computer Lab A301 — 30 workstations
+  • Computer Lab A302 — 30 workstations
+  • Network Lab A303 — 20 workstations (Cisco equipment)
+  • AI Lab A304 — 20 workstations (GPU servers)
+  • IT Support (Office 304)
+
+────────────────────────────────────────────────────────
+🏢 BUILDING B
+────────────────────────────────────────────────────────
+
+GROUND FLOOR:
+  • Cafeteria (07:30-17:00)
+  • Student Life Office
+  • 24/7 Vending Machines
+
+1ST-2ND FLOOR:
+  • Library (08:00-20:00, Mon-Sat)
+  • Silent Reading Room — 50 seats
+  • Group Study Room — 20 seats
+  • Digital Resources
+
+────────────────────────────────────────────────────────
+🅿️ OUTDOOR FACILITIES
+────────────────────────────────────────────────────────
+
+  • Student Parking: 200 spots (free)
+  • Staff Parking: 50 spots (badge required)
+  • Accessible Parking: 10 spots
+  • Sports Court (basketball/volleyball)
+  • Green Space and Relaxation Area
+
+────────────────────────────────────────────────────────
+📶 CONNECTIVITY
+────────────────────────────────────────────────────────
+
+WiFi: FPST-WiFi — Covers all buildings
+  • Login: Student ID number
+  • Password: Provided at enrollment
+  • Support: support@fpst.tn | Office 304

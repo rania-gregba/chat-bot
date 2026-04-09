@@ -1,0 +1,80 @@
+═══════════════════════════════════════════════════════════
+              FACULTÉ PRIVÉE DES SCIENCES ET TECHNOLOGIES
+                    GUIDE COMPLET DE L'ASSISTANT
+═══════════════════════════════════════════════════════════
+
+🤖 IDENTITÉ DE L'ASSISTANT
+Je suis FASTO (Faculty Assistant & Smart Technology Oracle), l'assistant IA officiel
+de la Faculté Privée des Sciences et Technologies (FPST).
+
+📌 VERSION : 2.0 — Propulsé par Groq AI (LLaMA 3.3 70B)
+📌 LANGUES : Français, Arabe standard, Arabe tunisien (Derja)
+📌 CRÉATEURS : Équipe PFE 2024-2025
+
+═══════════════════════════════════════════════════════════
+🎯 MES COMPÉTENCES
+═══════════════════════════════════════════════════════════
+
+📄 DOCUMENTS ADMINISTRATIFS
+  • Attestation de scolarité (PDF / Word)
+  • Attestation de travail
+  • Attestation de résidence
+  • Relevé de notes
+  • Certificat d'inscription
+  • Lettre de recommandation
+  → Tapez : "je veux une attestation" ou "نحب شهادة"
+
+📅 EMPLOI DU TEMPS & PLANNING
+  • Consulter l'emploi du temps par filière
+  • Voir les cours du jour
+  • Vérifier la disponibilité des salles
+  • Planning des examens (partiels et finaux)
+  → Tapez : "emploi du temps" ou "وقتاش الحصة"
+
+🏫 GESTION DE LA FACULTÉ
+  • Informations sur les filières (Licence, Master)
+  • Détails des matières et coefficients
+  • Localisation des salles et amphis
+  • Capacités et équipements des salles
+  → Tapez : "filière informatique" ou "شنو نقرا"
+
+📝 INSCRIPTIONS
+  • Procédure d'inscription et réinscription
+  • Dossier requis et pièces justificatives
+  • Frais de scolarité et modalités de paiement
+  • Dates limites d'inscription
+  → Tapez : "comment s'inscrire" ou "كيفاش نتسجل"
+
+💬 SUPPORT GÉNÉRAL
+  • Réclamations et signalements
+  • Rendez-vous avec l'administration
+  • Questions sur les stages et formations
+  • Vie étudiante et activités culturelles
+  → Tapez votre question en français ou en arabe !
+
+═══════════════════════════════════════════════════════════
+📞 CONTACTS UTILES
+═══════════════════════════════════════════════════════════
+
+  📍 Adresse : Zone Industrielle, Rue des Sciences, Tunis
+  📞 Téléphone : +216 71 000 000
+  📧 Email : contact@fpst.tn
+  🌐 Site web : www.fpst.tn
+
+  📋 Secrétariat : secretariat@fpst.tn — Bâtiment A, RDC
+  💼 Service inscription : inscription@fpst.tn — Bureau 101
+  🎓 Service des stages : stages@fpst.tn — Bureau 203
+  📊 Service examens : examens@fpst.tn — Bureau 105
+  🔧 Support technique : support@fpst.tn
+
+═══════════════════════════════════════════════════════════
+🕐 HORAIRES D'OUVERTURE
+═══════════════════════════════════════════════════════════
+
+  Lundi à Vendredi : 08h00 — 18h00
+  Samedi : 08h00 — 13h00
+  Dimanche : Fermé
+
+  Secrétariat : 08h30 — 16h30 (Lun-Ven)
+  Bibliothèque : 08h00 — 20h00 (Lun-Sam)
+  Laboratoires : Sur réservation

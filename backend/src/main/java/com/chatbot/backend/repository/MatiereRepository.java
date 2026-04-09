@@ -1,0 +1,15 @@
+package com.chatbot.backend.repository;
+
+import com.chatbot.backend.model.Matiere;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface MatiereRepository extends JpaRepository<Matiere, Long> {
+    Optional<Matiere> findByCode(String code);
+    List<Matiere> findByFiliereId(Long filiereId);
+    Boolean existsByCode(String code);
+}

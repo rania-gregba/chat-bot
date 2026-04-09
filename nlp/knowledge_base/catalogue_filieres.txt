@@ -1,0 +1,242 @@
+═══════════════════════════════════════════════════════════
+             CATALOGUE COMPLET DES FILIÈRES
+         Faculté Privée des Sciences et Technologies
+═══════════════════════════════════════════════════════════
+
+════════════════════════════════════════
+🖥️ LICENCE INFORMATIQUE DE GESTION (IG)
+════════════════════════════════════════
+
+CODE : LIG
+DURÉE : 3 ans (6 semestres)
+DIPLÔME : Licence Fondamentale en Informatique de Gestion
+DÉPARTEMENT : Informatique
+CAPACITÉ : 40 étudiants / promotion
+
+OBJECTIF :
+Former des informaticiens capables de concevoir et gérer des systèmes
+d'information en entreprise. Alliance entre compétences techniques
+et compréhension des processus métiers.
+
+PROGRAMME — SEMESTRE 1 (L1-S1) :
+  • Algorithmique et Programmation I (Coef 3, 4h/sem)
+  • Mathématiques pour l'informatique (Coef 3, 3h/sem)
+  • Architecture des ordinateurs (Coef 2, 3h/sem)
+  • Introduction à l'économie (Coef 2, 2h/sem)
+  • Anglais I (Coef 1, 2h/sem)
+  • Techniques de communication (Coef 1, 2h/sem)
+
+PROGRAMME — SEMESTRE 2 (L1-S2) :
+  • Algorithmique et Programmation II (Coef 3, 4h/sem)
+  • Bases de données I (Coef 3, 3h/sem)
+  • Systèmes d'exploitation (Coef 2, 3h/sem)
+  • Comptabilité générale (Coef 2, 2h/sem)
+  • Anglais II (Coef 1, 2h/sem)
+  • Probabilités et Statistiques (Coef 2, 3h/sem)
+
+PROGRAMME — SEMESTRE 3 (L2-S1) :
+  • Programmation Orientée Objet — Java (Coef 3, 4h/sem)
+  • Bases de données II (Coef 3, 3h/sem)
+  • Développement Web (HTML/CSS/JS) (Coef 2, 3h/sem)
+  • Réseaux informatiques (Coef 2, 3h/sem)
+  • Gestion d'entreprise (Coef 2, 2h/sem)
+  • Anglais III (Coef 1, 2h/sem)
+
+PROGRAMME — SEMESTRE 4 (L2-S2) :
+  • Frameworks Web (Angular/React) (Coef 3, 4h/sem)
+  • Génie logiciel (Coef 3, 3h/sem)
+  • Analyse et conception UML (Coef 2, 3h/sem)
+  • Administration système Linux (Coef 2, 3h/sem)
+  • Droit informatique (Coef 1, 2h/sem)
+  • Stage d'observation (1 mois — été)
+
+PROGRAMME — SEMESTRE 5 (L3-S1) :
+  • Développement mobile (Android/iOS) (Coef 3, 4h/sem)
+  • Intelligence Artificielle I (Coef 3, 3h/sem)
+  • Sécurité informatique (Coef 2, 3h/sem)
+  • ERP et SI d'entreprise (Coef 2, 3h/sem)
+  • Gestion de projet IT (Coef 2, 2h/sem)
+  • Anglais professionnel (Coef 1, 2h/sem)
+
+PROGRAMME — SEMESTRE 6 (L3-S2) :
+  • Cloud Computing & DevOps (Coef 3, 3h/sem)
+  • Data Science & Big Data (Coef 2, 3h/sem)
+  • Méthodologies Agile (Scrum) (Coef 2, 2h/sem)
+  • Projet de Fin d'Études (PFE) (Coef 5, 8h/sem)
+  • Stage professionnel (2 mois)
+
+DÉBOUCHÉS :
+  • Développeur Full-Stack
+  • Administrateur de bases de données
+  • Consultant ERP / SI
+  • Chef de projet informatique
+  • Analyste programmeur
+
+════════════════════════════════════════
+🔧 LICENCE GÉNIE LOGICIEL (GL)
+════════════════════════════════════════
+
+CODE : LGL
+DURÉE : 3 ans
+DÉPARTEMENT : Informatique
+CAPACITÉ : 35 étudiants / promotion
+
+OBJECTIF :
+Former des ingénieurs logiciels maîtrisant le cycle complet de
+développement : de la conception à la livraison et maintenance.
+
+MATIÈRES PRINCIPALES :
+  • Programmation avancée (C++, Python, Java)
+  • Architecture logicielle et Design Patterns
+  • Tests et Qualité logicielle
+  • DevOps et CI/CD
+  • Développement Web avancé
+  • Développement mobile cross-platform
+  • Bases de données avancées (NoSQL, GraphDB)
+  • Intelligence Artificielle et Machine Learning
+
+DÉBOUCHÉS :
+  • Ingénieur logiciel
+  • Architecte logiciel
+  • DevOps Engineer
+  • Testeur / QA Engineer
+  • Lead Developer
+
+════════════════════════════════════════
+🌐 LICENCE RÉSEAUX ET TÉLÉCOMMUNICATIONS (RT)
+════════════════════════════════════════
+
+CODE : LRT
+DURÉE : 3 ans
+DÉPARTEMENT : Réseaux
+CAPACITÉ : 30 étudiants / promotion
+
+OBJECTIF :
+Former des spécialistes des réseaux et des télécommunications
+capables de concevoir, déployer et administrer des infrastructures.
+
+MATIÈRES PRINCIPALES :
+  • Fondamentaux des réseaux (TCP/IP, Ethernet)
+  • Administration réseau (Cisco, Mikrotik)
+  • Sécurité réseau et firewall
+  • Télécommunications et transmission
+  • Virtualisation et Cloud
+  • VoIP et systèmes de communication
+  • Internet des Objets (IoT)
+  • Administration Windows/Linux Server
+
+CERTIFICATIONS PRÉPARÉES :
+  • CCNA (Cisco Certified Network Associate)
+  • CompTIA Network+
+
+DÉBOUCHÉS :
+  • Administrateur réseau
+  • Ingénieur Télécom
+  • Technicien réseau
+  • Consultant sécurité réseau
+
+════════════════════════════════════════
+🤖 MASTER INTELLIGENCE ARTIFICIELLE ET DATA SCIENCE (IADS)
+════════════════════════════════════════
+
+CODE : MIADS
+DURÉE : 2 ans (4 semestres)
+DÉPARTEMENT : Informatique avancée
+CONDITION D'ACCÈS : Licence en Informatique (ou équivalent)
+CAPACITÉ : 25 étudiants / promotion
+
+OBJECTIF :
+Former des experts en IA et analyse de données capables de
+concevoir des systèmes intelligents et d'exploiter le Big Data.
+
+PROGRAMME :
+  M1-S1 :
+  • Machine Learning (Coef 4, 4h/sem)
+  • Deep Learning & Réseaux de neurones (Coef 4, 4h/sem)
+  • Statistiques avancées (Coef 3, 3h/sem)
+  • Big Data Technologies (Hadoop, Spark) (Coef 3, 3h/sem)
+  • Python pour la Data Science (Coef 2, 3h/sem)
+
+  M1-S2 :
+  • Natural Language Processing (NLP) (Coef 4, 4h/sem)
+  • Computer Vision (Coef 3, 3h/sem)
+  • Systèmes de recommandation (Coef 2, 3h/sem)
+  • Data Engineering & ETL (Coef 3, 3h/sem)
+  • Cloud & MLOps (Coef 2, 3h/sem)
+  • Projet de recherche I
+
+  M2-S1 :
+  • IA Générative & LLM (Coef 4, 4h/sem)
+  • Reinforcement Learning (Coef 3, 3h/sem)
+  • Éthique de l'IA (Coef 2, 2h/sem)
+  • Données massives en entreprise (Coef 3, 3h/sem)
+  • Projet de recherche II
+
+  M2-S2 :
+  • Mémoire de Master (Coef 8)
+  • Stage professionnel (4-6 mois)
+
+DÉBOUCHÉS :
+  • Data Scientist
+  • Ingénieur Machine Learning
+  • Ingénieur NLP
+  • Data Engineer
+  • Chercheur en IA
+
+════════════════════════════════════════
+🔒 MASTER CYBERSÉCURITÉ (CS)
+════════════════════════════════════════
+
+CODE : MCS
+DURÉE : 2 ans
+DÉPARTEMENT : Sécurité informatique
+CONDITION D'ACCÈS : Licence en Informatique ou Réseaux
+CAPACITÉ : 25 étudiants / promotion
+
+MATIÈRES PRINCIPALES :
+  • Cryptographie avancée
+  • Ethical Hacking & Pentest
+  • Forensics numérique
+  • Sécurité des applications Web
+  • Gestion des incidents de sécurité
+  • Conformité et réglementation (ISO 27001, RGPD)
+  • Sécurité Cloud et DevSecOps
+  • SOC et SIEM
+
+CERTIFICATIONS PRÉPARÉES :
+  • CEH (Certified Ethical Hacker)
+  • CompTIA Security+
+  • OSCP (Offensive Security Certified Professional)
+
+DÉBOUCHÉS :
+  • Analyste cybersécurité
+  • Pentesteur
+  • Responsable sécurité (RSSI)
+  • Consultant en sécurité
+  • Ingénieur SOC
+
+════════════════════════════════════════
+📊 LICENCE SCIENCES DE GESTION (SG)
+════════════════════════════════════════
+
+CODE : LSG
+DURÉE : 3 ans
+DÉPARTEMENT : Gestion et Commerce
+CAPACITÉ : 45 étudiants / promotion
+
+MATIÈRES PRINCIPALES :
+  • Comptabilité et Finance
+  • Management stratégique
+  • Marketing fondamental
+  • Droit des affaires
+  • Gestion des ressources humaines
+  • Microéconomie et Macroéconomie
+  • Statistiques appliquées
+  • Informatique de gestion (Excel, ERP)
+
+DÉBOUCHÉS :
+  • Comptable
+  • Contrôleur de gestion
+  • Responsable RH
+  • Chef d'entreprise
+  • Consultant en management

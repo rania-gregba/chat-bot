@@ -1,0 +1,171 @@
+<div class="register-container" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="orb orb-primary"></div>
+  <div class="orb orb-secondary"></div>
+
+  <div class="register-card animate-fade">
+    <div class="card-header">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <line x1="19" y1="8" x2="19" y2="14"/>
+          <line x1="22" y1="11" x2="16" y2="11"/>
+        </svg>
+      </div>
+      <h1 class="gradient-text">{{ t('register.title') }}</h1>
+    </div>
+
+    <div class="form-scroll-area">
+      <!-- Section 1: Role -->
+      <div class="form-section">
+        <label class="section-label">{{ t('register.choose_role') }}</label>
+        <div class="role-grid">
+          <div class="role-option" [class.active]="selectedRole === 'USER'" (click)="selectedRole = 'USER'">
+            <span class="role-icon">🎓</span>
+            <div class="role-info">
+              <span class="role-title">{{ t('register.student') }}</span>
+            </div>
+            <div class="check-mark" *ngIf="selectedRole === 'USER'">✓</div>
+          </div>
+          <div class="role-option" [class.active]="selectedRole === 'PROFESSEUR'" (click)="selectedRole = 'PROFESSEUR'">
+            <span class="role-icon">👨‍🏫</span>
+            <div class="role-info">
+              <span class="role-title">{{ t('register.professor') }}</span>
+            </div>
+            <div class="check-mark" *ngIf="selectedRole === 'PROFESSEUR'">✓</div>
+          </div>
+        </div>
+      </div>
+
+      <ng-container *ngIf="selectedRole">
+        <!-- Section 2: Administrative ID -->
+        <div class="form-section animate-fade">
+          <label class="section-label">{{ selectedRole === 'USER' ? t('register.student_id') : t('register.prof_id') }}</label>
+          <div class="input-wrapper">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+            <input
+              type="text"
+              [ngModel]="selectedRole === 'USER' ? studentUniqueId : profUniqueId"
+              (ngModelChange)="onIdentifierChange($event)"
+              [placeholder]="t('register.id_placeholder')"
+            >
+          </div>
+        </div>
+
+        <!-- Section 3: Personal Info -->
+        <div class="form-section">
+          <label class="section-label">{{ t('register.personal_info') }}</label>
+          <div class="grid-2">
+            <div class="input-wrapper">
+              <input type="text" [(ngModel)]="firstName" [placeholder]="t('register.first_name')">
+            </div>
+            <div class="input-wrapper">
+              <input type="text" [(ngModel)]="lastName" [placeholder]="t('register.last_name')">
+            </div>
+          </div>
+          <div class="input-wrapper mt-10">
+            <input type="email" [(ngModel)]="email" [placeholder]="t('register.email')">
+          </div>
+          <div class="grid-2 mt-10">
+            <div class="input-wrapper">
+              <input type="text" [(ngModel)]="cin" [placeholder]="t('register.cin')">
+            </div>
+            <div class="input-wrapper">
+              <input type="tel" [(ngModel)]="phone" [placeholder]="t('register.phone')">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Academic Info -->
+        <div class="form-section" *ngIf="selectedRole === 'USER'">
+          <label class="section-label">{{ t('register.academic_info') }}</label>
+          <div class="grid-2">
+            <select [(ngModel)]="fieldOfStudy">
+              <option value="" disabled>{{ t('register.field_of_study') }}</option>
+              <option value="Informatique">Informatique / Computer Science</option>
+              <option value="Gestion">Gestion / Management</option>
+              <option value="Ingénierie">Ingénierie / Engineering</option>
+              <option value="Droit">Droit / Law</option>
+            </select>
+            <select [(ngModel)]="bacType">
+              <option value="" disabled>{{ t('register.bac_type') }}</option>
+              <option value="Sciences">Sciences</option>
+              <option value="Technique">Technique / Technical</option>
+              <option value="Math">Math</option>
+              <option value="Eco-Gestion">Eco-Gestion / Economics</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section" *ngIf="selectedRole === 'PROFESSEUR'">
+          <label class="section-label">{{ t('register.department') }}</label>
+          <div class="input-wrapper">
+            <input type="text" [(ngModel)]="department" placeholder="Ex: Informatique & IA">
+          </div>
+        </div>
+
+        <!-- Section 5: Account Credentials -->
+        <div class="form-section">
+          <label class="section-label">{{ t('register.account_info') }}</label>
+          <div class="input-wrapper">
+            <input type="text" [(ngModel)]="username" [placeholder]="t('register.username')">
+          </div>
+          <div class="grid-2 mt-10">
+            <div class="input-wrapper">
+              <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" [placeholder]="t('register.password')">
+            </div>
+            <div class="input-wrapper">
+              <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="confirmPassword" [placeholder]="t('register.confirm_password')">
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-area">
+          <label class="checkbox-container">
+            <input type="checkbox" [(ngModel)]="isConfirmed">
+            <span class="checkmark"></span>
+            {{ t('register.accept_terms') }}
+          </label>
+        </div>
+
+        <!-- Messages -->
+        <div class="error-msg" *ngIf="errorMessage">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          {{ errorMessage }}
+        </div>
+
+        <div class="success-msg" *ngIf="successMessage">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          {{ successMessage }}
+        </div>
+
+        <button class="btn-submit" (click)="onRegister()" [disabled]="isLoading">
+          <span *ngIf="!isLoading" class="btn-content">
+            {{ t('register.btn') }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+          <span *ngIf="isLoading" class="loader"></span>
+        </button>
+      </ng-container>
+    </div>
+
+    <div class="login-cta">
+      {{ t('register.already_account') }} <a (click)="goToLogin()">{{ t('register.login') }}</a>
+    </div>
+  </div>
+
+  <footer class="register-footer">
+    {{ t('login.footer') }}
+  </footer>
+</div>

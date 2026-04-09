@@ -1,0 +1,107 @@
+/* ============================================
+   NOTES PROF — FASTO Dark Theme
+============================================ */
+
+.notes-container {
+  padding: 8px;
+  color: var(--text-main);
+}
+
+.notes-header {
+  margin-bottom: 24px;
+}
+
+.notes-header h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.notes-subtitle {
+  color: var(--text-dim);
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   ADD NOTE CARD
+============================================ */
+.note-form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.form-section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-main);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.note-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* ============================================
+   NOTE VALUES
+============================================ */
+.note-value {
+  font-weight: 800;
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.note-pass { color: #34d399; }
+.note-fail { color: #f87171; }
+
+/* ============================================
+   LOADING STATE
+============================================ */
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   DELETE BUTTON
+============================================ */
+.delete-note-btn {
+  padding: 6px 8px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-radius: 6px;
+  color: #f87171;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-note-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+  .note-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .note-form-card { padding: 20px; }
+}

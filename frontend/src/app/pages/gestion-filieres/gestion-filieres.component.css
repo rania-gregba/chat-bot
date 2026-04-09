@@ -1,0 +1,73 @@
+/* Gestion Filières — FASTO Dark Theme */
+
+.content-scroll {
+  padding: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header layout */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+}
+
+.h-left { display: flex; align-items: center; gap: 16px; }
+
+.h-meta h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Outfit';
+  margin: 0;
+}
+
+.h-status {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+
+/* Action buttons */
+.action-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.8125rem;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+}
+
+/* Table action buttons */
+.msg-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.m-btn {
+  padding: 6px;
+  color: var(--text-dim);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.m-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+}
+
+.m-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .content-scroll { padding: 16px; }
+  .main-header { flex-direction: column; gap: 12px; }
+}

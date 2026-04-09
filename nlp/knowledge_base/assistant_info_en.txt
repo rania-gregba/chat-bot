@@ -1,0 +1,80 @@
+═══════════════════════════════════════════════════════════
+              PRIVATE FACULTY OF SCIENCES AND TECHNOLOGIES
+                    COMPLETE ASSISTANT GUIDE
+═══════════════════════════════════════════════════════════
+
+🤖 ASSISTANT IDENTITY
+I am FASTO (Faculty Assistant & Smart Technology Oracle), the official AI assistant
+of the Private Faculty of Sciences and Technologies (FPST).
+
+📌 VERSION: 2.0 — Powered by Groq AI (LLaMA 3.3 70B)
+📌 LANGUAGES: French, English, Standard Arabic, Tunisian Arabic (Derja)
+📌 CREATORS: PFE 2024-2025 Team
+
+═══════════════════════════════════════════════════════════
+🎯 MY CAPABILITIES
+═══════════════════════════════════════════════════════════
+
+📄 ADMINISTRATIVE DOCUMENTS
+  • Enrollment certificate (PDF / Word)
+  • Work certificate
+  • Residence certificate
+  • Transcript
+  • Registration certificate
+  • Recommendation letter
+  → Type: "I want a certificate" or "certificate"
+
+📅 TIMETABLE & SCHEDULING
+  • View timetable by program
+  • See today's classes
+  • Check room availability
+  • Exam schedule (midterms and finals)
+  → Type: "timetable" or "my schedule"
+
+🏫 FACULTY MANAGEMENT
+  • Information about programs (Bachelor's, Master's)
+  • Subject details and credit coefficients
+  • Room and amphitheater locations
+  • Room capacities and equipment
+  → Type: "computer science program" or "available programs"
+
+📝 REGISTRATION
+  • Registration and re-enrollment procedures
+  • Required documents and supporting files
+  • Tuition fees and payment methods
+  • Registration deadlines
+  → Type: "how to register" or "registration"
+
+💬 GENERAL SUPPORT
+  • Complaints and reports
+  • Appointments with administration
+  • Internship and training questions
+  • Student life and cultural activities
+  → Type your question in English, French, or Arabic!
+
+═══════════════════════════════════════════════════════════
+📞 USEFUL CONTACTS
+═══════════════════════════════════════════════════════════
+
+  📍 Address: Industrial Zone, Science Street, Tunis
+  📞 Phone: +216 71 000 000
+  📧 Email: contact@fpst.tn
+  🌐 Website: www.fpst.tn
+
+  📋 Secretary: secretariat@fpst.tn — Building A, Ground Floor
+  💼 Registration: inscription@fpst.tn — Office 101
+  🎓 Internship Office: stages@fpst.tn — Office 203
+  📊 Exam Service: examens@fpst.tn — Office 105
+  🔧 Tech Support: support@fpst.tn
+
+═══════════════════════════════════════════════════════════
+🕐 OPENING HOURS
+═══════════════════════════════════════════════════════════
+
+  Monday to Friday: 08:00 — 18:00
+  Saturday: 08:00 — 13:00
+  Sunday: Closed
+
+  Secretary: 08:30 — 16:30 (Mon-Fri)
+  Library: 08:00 — 20:00 (Mon-Sat)
+  Laboratories: By reservation
