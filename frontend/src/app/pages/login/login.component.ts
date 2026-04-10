@@ -36,6 +36,22 @@ export class LoginComponent {
     return this.languageService.t(key);
   }
 
+  text(key: string): string {
+    const translations: Record<string, Record<string, string>> = {
+      fr: {
+        password_placeholder: 'Mot de passe',
+      },
+      en: {
+        password_placeholder: 'Password',
+      },
+      ar: {
+        password_placeholder: 'كلمة المرور',
+      }
+    };
+
+    return translations[this.currentLang]?.[key] || translations['fr'][key] || key;
+  }
+
   onLogin() {
     const username = this.username?.trim();
     const password = this.password?.trim();

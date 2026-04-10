@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
+﻿import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LanguageService, Lang } from '../../services/language.service';
@@ -42,12 +42,12 @@ export class HeaderComponent {
 
   getCurrentLangFlag(): string {
     const lang = this.availableLanguages.find(l => l.code === this.currentLang);
-    return lang?.flag || '🇫🇷';
+    return lang?.flag || 'FR';
   }
 
   getCurrentLangLabel(): string {
     const lang = this.availableLanguages.find(l => l.code === this.currentLang);
-    return lang?.label || 'Français';
+    return lang?.label || 'Francais';
   }
 
   selectLanguage(code: Lang) {
@@ -77,3 +77,4 @@ export class HeaderComponent {
     }
   }
 }
+

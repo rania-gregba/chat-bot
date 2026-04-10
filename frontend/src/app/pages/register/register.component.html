@@ -87,17 +87,17 @@
           <div class="grid-2">
             <select [(ngModel)]="fieldOfStudy">
               <option value="" disabled>{{ t('register.field_of_study') }}</option>
-              <option value="Informatique">Informatique / Computer Science</option>
-              <option value="Gestion">Gestion / Management</option>
-              <option value="Ingénierie">Ingénierie / Engineering</option>
-              <option value="Droit">Droit / Law</option>
+              <option value="Informatique">{{ text('cs') }}</option>
+              <option value="Gestion">{{ text('management') }}</option>
+              <option value="Ingénierie">{{ text('engineering') }}</option>
+              <option value="Droit">{{ text('law') }}</option>
             </select>
             <select [(ngModel)]="bacType">
               <option value="" disabled>{{ t('register.bac_type') }}</option>
-              <option value="Sciences">Sciences</option>
-              <option value="Technique">Technique / Technical</option>
-              <option value="Math">Math</option>
-              <option value="Eco-Gestion">Eco-Gestion / Economics</option>
+              <option value="Sciences">{{ text('sciences') }}</option>
+              <option value="Technique">{{ text('technical') }}</option>
+              <option value="Math">{{ text('math') }}</option>
+              <option value="Eco-Gestion">{{ text('eco') }}</option>
             </select>
           </div>
         </div>
@@ -105,7 +105,7 @@
         <div class="form-section" *ngIf="selectedRole === 'PROFESSEUR'">
           <label class="section-label">{{ t('register.department') }}</label>
           <div class="input-wrapper">
-            <input type="text" [(ngModel)]="department" placeholder="Ex: Informatique & IA">
+            <input type="text" [(ngModel)]="department" [placeholder]="text('dept_placeholder')">
           </div>
         </div>
 

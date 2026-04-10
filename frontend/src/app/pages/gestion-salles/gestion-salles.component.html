@@ -1,18 +1,18 @@
-<div class="content-scroll animate-fade">
+<div class="content-scroll animate-fade" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
   <header class="main-header glass-panel mb-24">
     <div class="h-left">
       <button class="icon-btn-sm" (click)="goBack()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
       </button>
       <div class="h-meta">
-        <h1>Gestion des Salles</h1>
-        <span class="h-status">{{ salles.length }} salles répertoriées</span>
+        <h1>{{ text('title') }}</h1>
+        <span class="h-status">{{ salles.length }} {{ text('count') }}</span>
       </div>
     </div>
     <button class="btn-submit" style="width: auto; padding: 10px 20px; margin: 0;" (click)="openAdd()">
       <span class="btn-content">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Nouvelle Salle
+        {{ text('new_item') }}
       </span>
     </button>
   </header>
@@ -30,35 +30,33 @@
   <!-- Form Panel -->
   <div class="data-card animate-fade mb-24" *ngIf="showForm">
     <div class="panel-header" style="padding: 0 0 20px 0; margin-bottom: 24px;">
-      <h3 style="margin: 0;">{{ editMode ? 'Modifier' : 'Ajouter' }} une salle</h3>
+      <h3 style="margin: 0;">{{ editMode ? text('edit_item') : text('add_item') }}</h3>
     </div>
     
     <div class="grid-2">
       <div class="form-group">
-        <label class="field-label">Nom de la salle</label>
-        <input type="text" class="field-input" [(ngModel)]="nom" placeholder="Ex: Amphi A, Salle 101">
+        <label class="field-label">{{ text('room_name') }}</label>
+        <input type="text" class="field-input" [(ngModel)]="nom" [placeholder]="text('placeholder_name')">
       </div>
       <div class="form-group">
-        <label class="field-label">Code / ID</label>
-        <input type="text" class="field-input" [(ngModel)]="code" placeholder="Ex: S-101">
+        <label class="field-label">{{ text('code') }}</label>
+        <input type="text" class="field-input" [(ngModel)]="code" [placeholder]="text('placeholder_code')">
       </div>
       <div class="form-group mt-10">
-        <label class="field-label">Type de salle</label>
+        <label class="field-label">{{ text('room_type') }}</label>
         <select class="field-select" [(ngModel)]="type">
-          <option value="AMPHI">Amphithéâtre</option>
-          <option value="SALLE_COURS">Salle de cours</option>
-          <option value="LABO">Laboratoire / TP</option>
+          <option *ngFor="let roomType of types" [value]="roomType">{{ getTypeLabel(roomType) }}</option>
         </select>
       </div>
       <div class="form-group mt-10">
-        <label class="field-label">Capacité (personnes)</label>
-        <input type="number" class="field-input" [(ngModel)]="capacite" placeholder="Ex: 50">
+        <label class="field-label">{{ text('capacity') }}</label>
+        <input type="number" class="field-input" [(ngModel)]="capacite" [placeholder]="text('placeholder_capacity')">
       </div>
     </div>
 
     <div class="form-row mt-20" style="padding-top: 24px; border-top: 1px solid var(--border-light); display: flex; justify-content: flex-end; gap: 12px;">
-      <button class="action-btn" (click)="cancel()">Annuler</button>
-      <button class="btn-submit" style="width: auto; margin: 0;" (click)="save()">Sauvegarder</button>
+      <button class="action-btn" (click)="cancel()">{{ text('cancel') }}</button>
+      <button class="btn-submit" style="width: auto; margin: 0;" (click)="save()">{{ text('save') }}</button>
     </div>
   </div>
 
@@ -68,11 +66,11 @@
       <table>
         <thead>
           <tr>
-            <th>Nom</th>
-            <th>Code</th>
-            <th>Type</th>
-            <th>Capacité</th>
-            <th>Actions</th>
+            <th>{{ text('room_name') }}</th>
+            <th>{{ text('code') }}</th>
+            <th>{{ text('room_type') }}</th>
+            <th>{{ text('capacity') }}</th>
+            <th>{{ text('actions') }}</th>
           </tr>
         </thead>
         <tbody>
@@ -81,10 +79,10 @@
             <td><code class="badge badge-blue">{{ s.code }}</code></td>
             <td>
               <span class="badge" [ngClass]="s.type === 'AMPHI' ? 'badge-purple' : s.type === 'LABO' ? 'badge-amber' : 'badge-green'">
-                {{ s.type === 'AMPHI' ? 'Amphithéâtre' : s.type === 'LABO' ? 'Laboratoire' : 'Salle de cours' }}
+                {{ getTypeLabel(s.type) }}
               </span>
             </td>
-            <td>{{ s.capacite || '—' }} pers.</td>
+            <td>{{ s.capacite || text('empty_dash') }} {{ text('people_suffix') }}</td>
             <td>
               <div class="msg-actions">
                 <button class="m-btn" (click)="openEdit(s)">
@@ -97,7 +95,7 @@
             </td>
           </tr>
           <tr *ngIf="salles.length === 0">
-            <td colspan="5" style="text-align: center; padding: 40px; color: var(--text-dim);">Aucune salle répertoriée</td>
+            <td colspan="5" style="text-align: center; padding: 40px; color: var(--text-dim);">{{ text('empty') }}</td>
           </tr>
         </tbody>
       </table>

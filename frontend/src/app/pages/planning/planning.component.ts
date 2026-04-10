@@ -8,6 +8,7 @@ import { AuthService } from '../../services/auth.service';
 import { AdminService } from '../../services/admin.service';
 import { MatiereService } from '../../services/matiere.service';
 import { SalleService } from '../../services/salle.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-planning',
@@ -30,6 +31,7 @@ export class PlanningComponent implements OnInit {
   
   username = '';
   role = '';
+  currentLang = 'fr';
   isLoading = false;
   isGenerating = false;
   isAddingSlot = false;
@@ -56,8 +58,177 @@ export class PlanningComponent implements OnInit {
     private adminService: AdminService,
     private matiereService: MatiereService,
     private salleService: SalleService,
+    private languageService: LanguageService,
     private router: Router
-  ) {}
+  ) {
+    this.languageService.currentLang$.subscribe(lang => {
+      this.currentLang = lang;
+    });
+  }
+
+  text(key: string): string {
+    const translations: Record<string, Record<string, string>> = {
+      fr: {
+        title: 'Emploi du temps',
+        chat: 'Chat',
+        admin: 'Admin',
+        logout: 'Deconnexion',
+        by_program: 'Par filiere',
+        by_professor: 'Par enseignant',
+        select_program: 'Selectionner une filiere :',
+        select_professor: 'Selectionner un enseignant :',
+        my_program: 'Ma filiere :',
+        generate_auto: 'Generer auto',
+        generating: 'Generation...',
+        close: 'Fermer',
+        add_manual: 'Ajout manuel',
+        add_manual_title: 'Ajouter un creneau manuel',
+        day: 'Jour',
+        start: 'Debut',
+        end: 'Fin',
+        subject: 'Matiere',
+        room: 'Salle',
+        program: 'Filiere',
+        professor_optional: 'Enseignant (optionnel)',
+        none: 'Aucun',
+        group: 'Groupe',
+        group_placeholder: 'Ex: Groupe B',
+        cancel: 'Annuler',
+        save: 'Enregistrer',
+        loading: 'Chargement du planning...',
+        empty_title: 'Aucun creneau programme',
+        empty_desc: "Le planning pour cette filiere est vide. Contactez l'administration.",
+        hour: 'Heure',
+        teacher_view: 'Vue enseignant',
+        confirm_generate: 'Voulez-vous generer automatiquement le planning pour cette filiere ?',
+        success_generated: 'Planning genere avec succes !',
+        error_generation: 'Erreur lors de la generation.',
+        confirm_delete_slot: 'Supprimer ce creneau ?',
+        error_delete: 'Erreur lors de la suppression',
+        missing_required: 'Veuillez remplir les informations obligatoires (matiere, salle, filiere).',
+        success_added: 'Creneau ajoute avec succes !',
+        conflict_detected: 'Conflit detecte',
+        monday: 'Lundi',
+        tuesday: 'Mardi',
+        wednesday: 'Mercredi',
+        thursday: 'Jeudi',
+        friday: 'Vendredi',
+        saturday: 'Samedi',
+        teacher_prefix: 'Pr.'
+      },
+      en: {
+        title: 'Timetable',
+        chat: 'Chat',
+        admin: 'Admin',
+        logout: 'Sign out',
+        by_program: 'By program',
+        by_professor: 'By professor',
+        select_program: 'Select a program:',
+        select_professor: 'Select a professor:',
+        my_program: 'My program:',
+        generate_auto: 'Generate automatically',
+        generating: 'Generating...',
+        close: 'Close',
+        add_manual: 'Manual slot',
+        add_manual_title: 'Add a manual slot',
+        day: 'Day',
+        start: 'Start',
+        end: 'End',
+        subject: 'Subject',
+        room: 'Room',
+        program: 'Program',
+        professor_optional: 'Professor (optional)',
+        none: 'None',
+        group: 'Group',
+        group_placeholder: 'Example: Group B',
+        cancel: 'Cancel',
+        save: 'Save',
+        loading: 'Loading timetable...',
+        empty_title: 'No scheduled slot',
+        empty_desc: 'The timetable for this program is empty. Please contact the administration.',
+        hour: 'Time',
+        teacher_view: 'Professor view',
+        confirm_generate: 'Generate a timetable automatically for this program?',
+        success_generated: 'Timetable generated successfully!',
+        error_generation: 'Error while generating.',
+        confirm_delete_slot: 'Delete this slot?',
+        error_delete: 'Error while deleting',
+        missing_required: 'Please fill in the required information (subject, room, program).',
+        success_added: 'Slot added successfully!',
+        conflict_detected: 'Conflict detected',
+        monday: 'Monday',
+        tuesday: 'Tuesday',
+        wednesday: 'Wednesday',
+        thursday: 'Thursday',
+        friday: 'Friday',
+        saturday: 'Saturday',
+        teacher_prefix: 'Prof.'
+      },
+      ar: {
+        title: 'جدول الحصص',
+        chat: 'المحادثة',
+        admin: 'الإدارة',
+        logout: 'تسجيل الخروج',
+        by_program: 'حسب الاختصاص',
+        by_professor: 'حسب الأستاذ',
+        select_program: 'اختر الاختصاص:',
+        select_professor: 'اختر الأستاذ:',
+        my_program: 'اختصاصي:',
+        generate_auto: 'توليد آلي',
+        generating: 'جار التوليد...',
+        close: 'إغلاق',
+        add_manual: 'إضافة يدوية',
+        add_manual_title: 'إضافة حصة يدويا',
+        day: 'اليوم',
+        start: 'البداية',
+        end: 'النهاية',
+        subject: 'المادة',
+        room: 'القاعة',
+        program: 'الاختصاص',
+        professor_optional: 'الأستاذ (اختياري)',
+        none: 'لا أحد',
+        group: 'المجموعة',
+        group_placeholder: 'مثال: مجموعة ب',
+        cancel: 'إلغاء',
+        save: 'حفظ',
+        loading: 'جار تحميل الجدول...',
+        empty_title: 'لا توجد حصص مبرمجة',
+        empty_desc: 'هذا الجدول فارغ حاليا. يرجى الاتصال بالإدارة.',
+        hour: 'الوقت',
+        teacher_view: 'عرض الأستاذ',
+        confirm_generate: 'هل تريد توليد الجدول آليا لهذا الاختصاص؟',
+        success_generated: 'تم توليد الجدول بنجاح!',
+        error_generation: 'حدث خطأ أثناء التوليد.',
+        confirm_delete_slot: 'هل تريد حذف هذه الحصة؟',
+        error_delete: 'حدث خطأ أثناء الحذف',
+        missing_required: 'يرجى ملء المعلومات المطلوبة (المادة، القاعة، الاختصاص).',
+        success_added: 'تمت إضافة الحصة بنجاح!',
+        conflict_detected: 'تم اكتشاف تعارض',
+        monday: 'الاثنين',
+        tuesday: 'الثلاثاء',
+        wednesday: 'الأربعاء',
+        thursday: 'الخميس',
+        friday: 'الجمعة',
+        saturday: 'السبت',
+        teacher_prefix: 'أ.'
+      }
+    };
+
+    return translations[this.currentLang]?.[key] || translations['fr'][key] || key;
+  }
+
+  getDayLabel(day: string): string {
+    const map: Record<string, string> = {
+      LUNDI: 'monday',
+      MARDI: 'tuesday',
+      MERCREDI: 'wednesday',
+      JEUDI: 'thursday',
+      VENDREDI: 'friday',
+      SAMEDI: 'saturday'
+    };
+
+    return this.text(map[day] || day);
+  }
 
   ngOnInit() {
     if (!this.authService.isLoggedIn()) {
@@ -158,17 +329,17 @@ export class PlanningComponent implements OnInit {
 
   genererPlanningAuto() {
     if (!this.selectedFiliereId || this.role !== 'ADMIN') return;
-    if (confirm('Voulez-vous générer automatiquement le planning pour cette filière ? Cela ajoutera des créneaux aléatoires sans conflits.')) {
+    if (confirm(this.text('confirm_generate'))) {
       this.isGenerating = true;
       this.planningService.genererPlanning(this.selectedFiliereId, 'S1').subscribe({
         next: () => {
           this.isGenerating = false;
-          alert('Planning généré avec succès !');
+          alert(this.text('success_generated'));
           this.loadPlanning();
         },
         error: (err) => {
           this.isGenerating = false;
-          alert('Erreur lors de la génération. ' + (err.error?.error || ''));
+          alert(this.text('error_generation') + ' ' + (err.error?.error || ''));
         }
       });
     }
@@ -201,10 +372,10 @@ export class PlanningComponent implements OnInit {
   }
 
   supprimerCreneau(id: number) {
-    if (confirm('Supprimer ce créneau ?')) {
+    if (confirm(this.text('confirm_delete_slot'))) {
       this.planningService.supprimerCreneau(id).subscribe({
         next: () => this.loadPlanning(),
-        error: () => alert('Erreur lors de la suppression')
+        error: () => alert(this.text('error_delete'))
       });
     }
   }
@@ -215,27 +386,27 @@ export class PlanningComponent implements OnInit {
 
   ajouterCreneauManuel() {
     if (!this.newSlot.matiereId || !this.newSlot.salleId || !this.newSlot.filiereId) {
-      alert('Veuillez remplir les informations obligatoires (Matière, Salle, Filière)');
+      alert(this.text('missing_required'));
       return;
     }
 
     this.isLoading = true;
     this.planningService.ajouterCreneau(this.newSlot).subscribe({
       next: () => {
-        alert('Créneau ajouté avec succès !');
+        alert(this.text('success_added'));
         if (this.viewMode === 'FILIERE') this.loadPlanning();
         else this.loadPlanningProf();
         this.isAddingSlot = false;
       },
       error: (err) => {
         this.isLoading = false;
-        alert('Erreur: ' + (err.error?.error || 'Conflit détecté'));
+        alert(this.text('error_generation') + ' ' + (err.error?.error || this.text('conflict_detected')));
       }
     });
   }
 
   getFiliereNom(): string {
     const f = this.filieres.find(f => f.id === this.selectedFiliereId);
-    return f ? f.nom : (this.viewMode === 'PROFESSEUR' && this.selectedProfesseurId ? 'Vue Enseignant' : '');
+    return f ? f.nom : (this.viewMode === 'PROFESSEUR' && this.selectedProfesseurId ? this.text('teacher_view') : '');
   }
 }

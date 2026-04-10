@@ -53,7 +53,7 @@
             id="password"
             type="password"
             [(ngModel)]="password"
-            placeholder="••••••••"
+            [placeholder]="text('password_placeholder')"
             (keyup.enter)="onLogin()"
             autocomplete="current-password"
           >

@@ -1,8 +1,8 @@
-<div class="notes-container">
+<div class="notes-container" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
   <div class="notes-header">
     <div>
-      <h2>📝 Saisie des Notes</h2>
-      <p class="notes-subtitle">Ajoutez une nouvelle évaluation pour un étudiant de votre classe.</p>
+      <h2>{{ text('title') }}</h2>
+      <p class="notes-subtitle">{{ text('subtitle') }}</p>
     </div>
   </div>
 
@@ -13,12 +13,12 @@
 
   <!-- Add Note Form -->
   <div class="note-form-card mb-24">
-    <h3 class="form-section-title">Nouvelle Évaluation</h3>
+    <h3 class="form-section-title">{{ text('new_evaluation') }}</h3>
     <div class="note-form-grid">
       <div class="form-group">
-        <label class="field-label">Étudiant</label>
+        <label class="field-label">{{ text('student') }}</label>
         <select [(ngModel)]="newNote.etudiantId" class="field-input">
-          <option value="">Sélectionner un étudiant</option>
+          <option value="">{{ text('select_student') }}</option>
           <option *ngFor="let s of etudiants" [value]="s.id">
             {{ s.firstName }} {{ s.lastName }} ({{ s.studentId || s.username }})
           </option>
@@ -26,9 +26,9 @@
       </div>
 
       <div class="form-group">
-        <label class="field-label">Matière</label>
+        <label class="field-label">{{ text('subject') }}</label>
         <select [(ngModel)]="newNote.matiereId" class="field-input">
-          <option value="">Sélectionner la matière</option>
+          <option value="">{{ text('select_subject') }}</option>
           <option *ngFor="let m of matieres" [value]="m.id">
             {{ m.nom }} ({{ m.filiere?.nom }})
           </option>
@@ -36,69 +36,69 @@
       </div>
 
       <div class="form-group">
-        <label class="field-label">Type Évaluation</label>
+        <label class="field-label">{{ text('evaluation_type') }}</label>
         <select [(ngModel)]="newNote.typeEvaluation" class="field-input">
-          <option value="DS">DS</option>
-          <option value="Examen">Examen</option>
-          <option value="TP">TP</option>
-          <option value="Projet">Projet</option>
+          <option value="DS">{{ getEvaluationTypeLabel('DS') }}</option>
+          <option value="Examen">{{ getEvaluationTypeLabel('Examen') }}</option>
+          <option value="TP">{{ getEvaluationTypeLabel('TP') }}</option>
+          <option value="Projet">{{ getEvaluationTypeLabel('Projet') }}</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label class="field-label">Note /20</label>
-        <input type="number" [(ngModel)]="newNote.valeur" min="0" max="20" step="0.25" class="field-input" placeholder="Ex: 15.5"/>
+        <label class="field-label">{{ text('grade20') }}</label>
+        <input type="number" [(ngModel)]="newNote.valeur" min="0" max="20" step="0.25" class="field-input" [placeholder]="text('grade_placeholder')"/>
       </div>
     </div>
 
     <div class="form-group mt-20">
-      <label class="field-label">Commentaire (Optionnel)</label>
-      <input type="text" [(ngModel)]="newNote.commentaire" placeholder="Ex: Excellent travail, bonne progression..." class="field-input"/>
+      <label class="field-label">{{ text('comment_optional') }}</label>
+      <input type="text" [(ngModel)]="newNote.commentaire" [placeholder]="text('comment_placeholder')" class="field-input"/>
     </div>
 
     <button class="btn-submit mt-20" style="width: auto; padding: 12px 28px;" (click)="ajouterNote()">
       <span class="btn-content">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Enregistrer la note
+        {{ text('save_grade') }}
       </span>
     </button>
   </div>
 
   <!-- Notes Table -->
   <div class="data-card">
-    <h3 class="card-title">Notes Enregistrées</h3>
+    <h3 class="card-title">{{ text('saved_grades') }}</h3>
     <div *ngIf="isLoading" class="loading-state">
       <div class="spinner"></div>
-      <span>Chargement des notes...</span>
+      <span>{{ text('loading') }}</span>
     </div>
 
     <div class="table-wrap" *ngIf="!isLoading">
       <table>
         <thead>
           <tr>
-            <th>Étudiant</th>
-            <th>Matière</th>
-            <th>Type</th>
-            <th>Note /20</th>
-            <th>Commentaire</th>
-            <th>Date</th>
-            <th>Action</th>
+            <th>{{ text('student') }}</th>
+            <th>{{ text('subject') }}</th>
+            <th>{{ text('type') }}</th>
+            <th>{{ text('grade20') }}</th>
+            <th>{{ text('comment') }}</th>
+            <th>{{ text('date') }}</th>
+            <th>{{ text('action') }}</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngIf="notes.length === 0">
-            <td colspan="7" class="empty-row">Aucune note saisie pour l'instant.</td>
+            <td colspan="7" class="empty-row">{{ text('empty') }}</td>
           </tr>
           <tr *ngFor="let n of notes">
             <td><strong>{{ n.etudiant?.firstName }} {{ n.etudiant?.lastName }}</strong></td>
             <td>{{ n.matiere?.nom }}</td>
-            <td><span class="badge badge-purple">{{ n.typeEvaluation }}</span></td>
+            <td><span class="badge badge-purple">{{ getEvaluationTypeLabel(n.typeEvaluation) }}</span></td>
             <td>
               <span class="note-value" [class.note-pass]="n.valeur >= 10" [class.note-fail]="n.valeur < 10">
                 {{ n.valeur }}
               </span>
             </td>
-            <td class="td-muted">{{ n.commentaire || '—' }}</td>
+            <td class="td-muted">{{ n.commentaire || text('empty_dash') }}</td>
             <td class="td-muted">{{ n.dateSaisie | date:'dd/MM/yyyy HH:mm' }}</td>
             <td>
               <button class="delete-note-btn" (click)="supprimerNote(n.id)">

@@ -1,18 +1,18 @@
-<div class="content-scroll animate-fade">
+<div class="content-scroll animate-fade" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
   <header class="main-header glass-panel mb-24">
     <div class="h-left">
       <button class="icon-btn-sm" (click)="goBack()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
       </button>
       <div class="h-meta">
-        <h1>Gestion des Matières</h1>
-        <span class="h-status">{{ matieres.length }} matières enregistrées</span>
+        <h1>{{ text('title') }}</h1>
+        <span class="h-status">{{ matieres.length }} {{ text('count') }}</span>
       </div>
     </div>
     <button class="btn-submit" style="width: auto; padding: 10px 20px; margin: 0;" (click)="openAdd()">
       <span class="btn-content">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Nouvelle Matière
+        {{ text('new_item') }}
       </span>
     </button>
   </header>
@@ -30,33 +30,33 @@
   <!-- Form Panel -->
   <div class="data-card animate-fade mb-24" *ngIf="showForm">
     <div class="panel-header" style="padding: 0 0 20px 0; margin-bottom: 24px;">
-      <h3 style="margin: 0;">{{ editMode ? 'Modifier' : 'Ajouter' }} une matière</h3>
+      <h3 style="margin: 0;">{{ editMode ? text('edit_item') : text('add_item') }}</h3>
     </div>
     
     <div class="grid-2">
       <div class="form-group">
-        <label class="field-label">Nom de la matière</label>
-        <input type="text" class="field-input" [(ngModel)]="nom" placeholder="Ex: Algorithmique">
+        <label class="field-label">{{ text('subject_name') }}</label>
+        <input type="text" class="field-input" [(ngModel)]="nom" [placeholder]="text('placeholder_name')">
       </div>
       <div class="form-group">
-        <label class="field-label">Code</label>
-        <input type="text" class="field-input" [(ngModel)]="code" placeholder="Ex: ALGO-101">
+        <label class="field-label">{{ text('code') }}</label>
+        <input type="text" class="field-input" [(ngModel)]="code" [placeholder]="text('placeholder_code')">
       </div>
       <div class="form-group mt-10">
-        <label class="field-label">Type d'enseignement</label>
+        <label class="field-label">{{ text('teaching_type') }}</label>
         <select class="field-select" [(ngModel)]="type">
           <option *ngFor="let t of types" [value]="t">{{ getTypeLabel(t) }}</option>
         </select>
       </div>
       <div class="form-group mt-10">
-        <label class="field-label">Coefficient</label>
-        <input type="number" class="field-input" [(ngModel)]="coefficient" placeholder="Ex: 3">
+        <label class="field-label">{{ text('coefficient') }}</label>
+        <input type="number" class="field-input" [(ngModel)]="coefficient" [placeholder]="text('placeholder_coefficient')">
       </div>
     </div>
 
     <div class="form-row mt-20" style="padding-top: 24px; border-top: 1px solid var(--border-light); display: flex; justify-content: flex-end; gap: 12px;">
-      <button class="action-btn" (click)="cancel()">Annuler</button>
-      <button class="btn-submit" style="width: auto; margin: 0;" (click)="save()">Sauvegarder</button>
+      <button class="action-btn" (click)="cancel()">{{ text('cancel') }}</button>
+      <button class="btn-submit" style="width: auto; margin: 0;" (click)="save()">{{ text('save') }}</button>
     </div>
   </div>
 
@@ -66,12 +66,12 @@
       <table>
         <thead>
           <tr>
-            <th>Nom</th>
-            <th>Code</th>
-            <th>Type</th>
-            <th>Coefficient</th>
-            <th>Volume</th>
-            <th>Actions</th>
+            <th>{{ text('subject_name') }}</th>
+            <th>{{ text('code') }}</th>
+            <th>{{ text('teaching_type') }}</th>
+            <th>{{ text('coefficient') }}</th>
+            <th>{{ text('volume') }}</th>
+            <th>{{ text('actions') }}</th>
           </tr>
         </thead>
         <tbody>
@@ -84,7 +84,7 @@
               </span>
             </td>
             <td>{{ m.coefficient || '1.0' }}</td>
-            <td>{{ m.volumeHoraire ? m.volumeHoraire + 'h' : '—' }}</td>
+            <td>{{ m.volumeHoraire ? m.volumeHoraire + 'h' : text('empty_dash') }}</td>
             <td>
               <div class="msg-actions">
                 <button class="m-btn" (click)="openEdit(m)">
@@ -97,7 +97,7 @@
             </td>
           </tr>
           <tr *ngIf="matieres.length === 0">
-            <td colspan="6" style="text-align: center; padding: 40px; color: var(--text-dim);">Aucune matière enregistrée</td>
+            <td colspan="6" style="text-align: center; padding: 40px; color: var(--text-dim);">{{ text('empty') }}</td>
           </tr>
         </tbody>
       </table>

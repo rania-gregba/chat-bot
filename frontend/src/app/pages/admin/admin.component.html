@@ -1,4 +1,4 @@
-<div class="admin-shell" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+﻿<div class="admin-shell" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
 
   <!-- ======== SIDEBAR ======== -->
   <aside class="sidebar">
@@ -12,7 +12,7 @@
       </div>
       <div class="logo-text">
         <span class="logo-title">FASTO</span>
-        <span class="logo-sub">{{ t('admin.title') }}</span>
+        <span class="logo-sub">{{ text('title') }}</span>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
             <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
           </svg>
         </span>
-        <span>{{ t('admin.dashboard') }}</span>
+        <span>{{ text('dashboard') }}</span>
       </button>
 
       <button class="nav-item" [class.active]="activeTab === 'identities'" (click)="setTab('identities')">
@@ -33,8 +33,8 @@
             <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
           </svg>
         </span>
-        <span>{{ t('admin.nav.identities') }}</span>
-        <span class="nav-badge">Clé</span>
+        <span>{{ text('identities') }}</span>
+        <span class="nav-badge">{{ text('key_badge') }}</span>
       </button>
 
       <button class="nav-item" [class.active]="activeTab === 'users'" (click)="setTab('users')">
@@ -46,7 +46,7 @@
             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </span>
-        <span>{{ t('admin.nav.users') }}</span>
+        <span>{{ text('users') }}</span>
         <span class="nav-count">{{ stats.totalUsers }}</span>
       </button>
 
@@ -61,7 +61,7 @@
             <line x1="3" y1="18" x2="3.01" y2="18"/>
           </svg>
         </span>
-        <span>{{ t('admin.nav.faculty') }}</span>
+        <span>{{ text('faculty') }}</span>
       </button>
 
       <button class="nav-item" [class.active]="activeTab === 'notes'" (click)="setTab('notes')">
@@ -70,7 +70,7 @@
             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
           </svg>
         </span>
-        <span>{{ t('admin.nav.grades') }}</span>
+        <span>{{ text('grades') }}</span>
       </button>
 
       <button class="nav-item" [class.active]="activeTab === 'messages'" (click)="setTab('messages')">
@@ -79,7 +79,7 @@
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
         </span>
-        <span>{{ t('admin.nav.messages') }}</span>
+        <span>{{ text('messages') }}</span>
         <span class="nav-count">{{ stats.totalMessages }}</span>
       </button>
 
@@ -90,7 +90,7 @@
             <polyline points="14 2 14 8 20 8"/>
           </svg>
         </span>
-        <span>{{ t('admin.nav.documents') }}</span>
+        <span>{{ text('documents') }}</span>
       </button>
 
       <button class="nav-item" [class.active]="activeTab === 'chat'" (click)="setTab('chat')">
@@ -100,13 +100,13 @@
             <path d="M12 8v4l3 3"/>
           </svg>
         </span>
-        <span>{{ t('admin.nav.bot') }}</span>
+        <span>{{ text('bot') }}</span>
       </button>
     </nav>
 
     <div class="sidebar-footer">
       <button class="lang-btn-side" (click)="toggleLanguage()">
-        🌐 {{ currentLang === 'fr' ? 'العربية' : currentLang === 'ar' ? 'English' : 'Français' }}
+        {{ text('next_lang') }}
       </button>
       <button class="logout-btn-side" (click)="logout()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -114,7 +114,7 @@
           <polyline points="16 17 21 12 16 7"/>
           <line x1="21" y1="12" x2="9" y2="12"/>
         </svg>
-        {{ t('login.button') }}
+        {{ t('app.logout') }}
       </button>
     </div>
   </aside>
@@ -125,21 +125,21 @@
     <!-- Top header bar -->
     <header class="topbar">
       <div class="topbar-title">
-        <span *ngIf="activeTab === 'stats'">📊 {{ t('admin.dashboard') }}</span>
-        <span *ngIf="activeTab === 'identities'">🔑 {{ t('admin.identity.title') }}</span>
-        <span *ngIf="activeTab === 'users'">👥 {{ t('admin.nav.users') }}</span>
-        <span *ngIf="activeTab === 'gestion'">🏫 {{ t('admin.nav.faculty') }}</span>
-        <span *ngIf="activeTab === 'notes'">📈 {{ t('admin.nav.grades') }}</span>
-        <span *ngIf="activeTab === 'messages'">💬 {{ t('admin.nav.messages') }}</span>
-        <span *ngIf="activeTab === 'documents'">📄 {{ t('admin.nav.documents') }}</span>
-        <span *ngIf="activeTab === 'chat'">🤖 {{ t('admin.nav.bot') }}</span>
+        <span *ngIf="activeTab === 'stats'">{{ text('dashboard') }}</span>
+        <span *ngIf="activeTab === 'identities'">{{ text('identity_title') }}</span>
+        <span *ngIf="activeTab === 'users'">{{ text('users') }}</span>
+        <span *ngIf="activeTab === 'gestion'">{{ text('faculty') }}</span>
+        <span *ngIf="activeTab === 'notes'">{{ text('grades') }}</span>
+        <span *ngIf="activeTab === 'messages'">{{ text('messages') }}</span>
+        <span *ngIf="activeTab === 'documents'">{{ text('documents') }}</span>
+        <span *ngIf="activeTab === 'chat'">{{ text('bot') }}</span>
       </div>
       <div class="topbar-right">
         <span class="admin-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
-          Admin
+          {{ text('admin_badge') }}
         </span>
       </div>
     </header>
@@ -150,72 +150,72 @@
       <div *ngIf="activeTab === 'stats'" class="section-fade">
         <div class="stats-grid">
           <div class="stat-card card-indigo">
-            <div class="stat-icon-box"><span>📄</span></div>
+            <div class="stat-icon-box"><span>D</span></div>
             <div class="stat-body">
               <div class="stat-num">{{ stats.totalDocuments }}</div>
-              <div class="stat-label">{{ t('admin.nav.documents') }}</div>
+              <div class="stat-label">{{ text('documents') }}</div>
             </div>
           </div>
           <div class="stat-card card-purple">
-            <div class="stat-icon-box"><span>💬</span></div>
+            <div class="stat-icon-box"><span>M</span></div>
             <div class="stat-body">
               <div class="stat-num">{{ stats.totalMessages }}</div>
-              <div class="stat-label">{{ t('admin.nav.messages') }}</div>
+              <div class="stat-label">{{ text('messages') }}</div>
             </div>
           </div>
           <div class="stat-card card-cyan">
-            <div class="stat-icon-box"><span>👥</span></div>
+            <div class="stat-icon-box"><span>U</span></div>
             <div class="stat-body">
               <div class="stat-num">{{ stats.totalUsers }}</div>
-              <div class="stat-label">{{ t('admin.nav.users') }}</div>
+              <div class="stat-label">{{ text('users') }}</div>
             </div>
           </div>
           <div class="stat-card card-amber">
-            <div class="stat-icon-box"><span>🎓</span></div>
+            <div class="stat-icon-box"><span>P</span></div>
             <div class="stat-body">
               <div class="stat-num">{{ stats.totalFilieres || 0 }}</div>
-              <div class="stat-label">{{ t('manage.programs') }}</div>
+              <div class="stat-label">{{ text('manage_programs') }}</div>
             </div>
           </div>
           <div class="stat-card card-rose">
-            <div class="stat-icon-box"><span>🏫</span></div>
+            <div class="stat-icon-box"><span>R</span></div>
             <div class="stat-body">
               <div class="stat-num">{{ stats.totalSalles || 0 }}</div>
-              <div class="stat-label">{{ t('manage.rooms') }}</div>
+              <div class="stat-label">{{ text('manage_rooms') }}</div>
             </div>
           </div>
           <div class="stat-card card-teal">
-            <div class="stat-icon-box"><span>📚</span></div>
+            <div class="stat-icon-box"><span>S</span></div>
             <div class="stat-body">
               <div class="stat-num">{{ stats.totalMatieres || 0 }}</div>
-              <div class="stat-label">{{ t('manage.subjects') }}</div>
+              <div class="stat-label">{{ text('manage_subjects') }}</div>
             </div>
           </div>
         </div>
 
         <!-- Role breakdown -->
         <div class="roles-card">
-          <h3 class="card-title">{{ t('admin.stats.users_breakdown') }}</h3>
+          <h3 class="card-title">{{ text('users_breakdown') }}</h3>
           <div class="roles-row">
             <div class="role-pill pill-blue">
-              <span class="pill-icon">🎓</span>
+              <span class="pill-icon">S</span>
               <div>
                 <div class="pill-count">{{ stats.nbEtudiants || 0 }}</div>
-                <div class="pill-label">{{ t('admin.stats.students') }}</div>
+                <div class="pill-label">{{ text('students') }}</div>
               </div>
             </div>
             <div class="role-pill pill-green">
-              <span class="pill-icon">👨‍🏫</span>
+              <span class="pill-icon">P</span>
               <div>
                 <div class="pill-count">{{ stats.nbProfesseurs || 0 }}</div>
-                <div class="pill-label">{{ t('admin.stats.professors') }}</div>
+                <div class="pill-label">{{ text('professors') }}</div>
               </div>
             </div>
             <div class="role-pill pill-red">
-              <span class="pill-icon">⚙️</span>
+              <span class="pill-icon">A</span>
               <div>
                 <div class="pill-count">{{ stats.nbAdmins || 0 }}</div>
-                <div class="pill-label">{{ t('admin.stats.admins') }}</div>
+                <div class="pill-label">{{ text('admins') }}</div>
               </div>
             </div>
           </div>
@@ -226,28 +226,28 @@
       <div *ngIf="activeTab === 'identities'" class="section-fade">
         <div class="identity-layout">
           <div class="identity-info-card">
-            <div class="icard-icon">🔑</div>
-            <h3>{{ t('admin.identity.how_it_works') }}</h3>
+            <div class="icard-icon">ID</div>
+            <h3>{{ text('identity_how') }}</h3>
             <ol class="icard-steps">
-              <li>{{ t('admin.identity.step1') }}</li>
-              <li>{{ t('admin.identity.step2') }}</li>
-              <li>{{ t('admin.identity.step3') }}</li>
-              <li>{{ t('admin.identity.step4') }}</li>
-              <li>{{ t('admin.identity.step5') }}</li>
+              <li>{{ text('identity_step1') }}</li>
+              <li>{{ text('identity_step2') }}</li>
+              <li>{{ text('identity_step3') }}</li>
+              <li>{{ text('identity_step4') }}</li>
+              <li>{{ text('identity_step5') }}</li>
             </ol>
             <div class="icard-note">
-              ⚠️ {{ t('admin.identity.note') }}
+              {{ text('identity_note') }}
             </div>
           </div>
 
           <div class="identity-form-panel">
-            <h2 class="panel-title">{{ t('admin.identity.generate_title') }}</h2>
+            <h2 class="panel-title">{{ text('identity_generate_title') }}</h2>
 
             <div class="form-field">
-              <label class="field-label">{{ t('admin.identity.label_role') }}</label>
+              <label class="field-label">{{ text('identity_role') }}</label>
               <select [(ngModel)]="identityData.role" class="field-select">
-                <option value="USER">🎓 {{ t('admin.stats.students') }} (12)</option>
-                <option value="PROFESSEUR">👨‍🏫 {{ t('admin.stats.professors') }} (8)</option>
+                <option value="STUDENT">{{ text('students') }} (12)</option>
+                <option value="PROFESSEUR">{{ text('professors') }} (8)</option>
               </select>
             </div>
 
@@ -272,21 +272,21 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polygon points="5 3 19 12 5 21 5 3"/>
                 </svg>
-                {{ t('admin.identity.generate_btn') }}
+                {{ text('identity_generate_btn') }}
               </span>
               <span *ngIf="isLoading" class="loader-text">
                 <span class="spinner"></span> ...
               </span>
             </button>
 
-            <div class="id-error" *ngIf="identityError">⚠️ {{ identityError }}</div>
+            <div class="id-error" *ngIf="identityError">{{ identityError }}</div>
 
             <div class="id-result" *ngIf="generatedId">
               <div class="result-header">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2">
                   <polyline points="20 6 9 17 4 12"/>
                 </svg>
-                {{ t('admin.identity.success') }}
+                {{ text('identity_success') }}
               </div>
               <div class="id-display-wrap">
                 <div class="id-display-number">{{ generatedId }}</div>
@@ -295,7 +295,7 @@
                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
                   </svg>
-                  Copy
+                  {{ text('copy') }}
                 </button>
               </div>
             </div>
@@ -306,7 +306,7 @@
       <!-- ======= USERS ======= -->
       <div *ngIf="activeTab === 'users'" class="section-fade">
         <div class="data-card">
-          <h2 class="card-title">{{ t('admin.nav.users') }} ({{ users.length }})</h2>
+          <h2 class="card-title">{{ text('users') }} ({{ users.length }})</h2>
           <div class="table-wrap">
             <table>
               <thead>
@@ -314,9 +314,9 @@
                   <th>#</th>
                   <th>{{ t('register.username') }}</th>
                   <th>{{ t('register.email') }}</th>
-                  <th>{{ t('admin.identity.label_role') }}</th>
-                  <th>Date</th>
-                  <th>Action</th>
+                  <th>{{ text('identity_role') }}</th>
+                  <th>{{ text('date') }}</th>
+                  <th>{{ text('action') }}</th>
                 </tr>
               </thead>
               <tbody>
@@ -326,11 +326,11 @@
                   <td class="td-muted">{{ user.email }}</td>
                   <td>
                     <span class="badge" [ngClass]="{
-                      'badge-blue': user.role === 'USER',
+                      'badge-blue': user.role === 'USER' || user.role === 'STUDENT',
                       'badge-green': user.role === 'PROFESSEUR',
                       'badge-red': user.role === 'ADMIN'
                     }">
-                      {{ user.role === 'USER' ? '🎓 ' + t('admin.stats.students') : user.role === 'PROFESSEUR' ? '👨‍🏫 ' + t('admin.stats.professors') : '⚙️ ' + t('admin.stats.admins') }}
+                      {{ user.role === 'USER' || user.role === 'STUDENT' ? text('students') : user.role === 'PROFESSEUR' ? text('professors') : text('admins') }}
                     </span>
                   </td>
                   <td class="td-muted">{{ user.createdAt | date:'dd/MM/yyyy' }}</td>
@@ -340,12 +340,12 @@
                         <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/>
                         <path d="M9 6V4h6v2"/>
                       </svg>
-                      Delete
+                      {{ text('delete') }}
                     </button>
                   </td>
                 </tr>
                 <tr *ngIf="users.length === 0">
-                  <td colspan="6" class="empty-row">No users found</td>
+                  <td colspan="6" class="empty-row">{{ text('no_users') }}</td>
                 </tr>
               </tbody>
             </table>
@@ -353,31 +353,31 @@
         </div>
       </div>
 
-      <!-- ======= GESTION FACULTÉ ======= -->
+      <!-- ======= GESTION FACULTÃ‰ ======= -->
       <div *ngIf="activeTab === 'gestion'" class="section-fade">
         <div class="gestion-grid">
           <div class="gestion-card gc-indigo" (click)="goToFilieres()">
-            <div class="gc-icon">🎓</div>
-            <h3>{{ t('manage.programs') }}</h3>
-            <p>Manage faculty programs</p>
+            <div class="gc-icon">P</div>
+            <h3>{{ text('manage_programs') }}</h3>
+            <p>{{ text('manage_programs_desc') }}</p>
             <div class="gc-count">{{ stats.totalFilieres || 0 }}</div>
           </div>
           <div class="gestion-card gc-cyan" (click)="goToSalles()">
-            <div class="gc-icon">🏫</div>
-            <h3>{{ t('manage.rooms') }}</h3>
-            <p>Manage rooms and labs</p>
+            <div class="gc-icon">R</div>
+            <h3>{{ text('manage_rooms') }}</h3>
+            <p>{{ text('manage_rooms_desc') }}</p>
             <div class="gc-count">{{ stats.totalSalles || 0 }}</div>
           </div>
           <div class="gestion-card gc-amber" (click)="goToMatieres()">
-            <div class="gc-icon">📚</div>
-            <h3>{{ t('manage.subjects') }}</h3>
-            <p>Manage subjects and classes</p>
+            <div class="gc-icon">S</div>
+            <h3>{{ text('manage_subjects') }}</h3>
+            <p>{{ text('manage_subjects_desc') }}</p>
             <div class="gc-count">{{ stats.totalMatieres || 0 }}</div>
           </div>
           <div class="gestion-card gc-rose" (click)="goToPlanning()">
-            <div class="gc-icon">📅</div>
-            <h3>{{ t('admin.nav.timetable') }}</h3>
-            <p>Manage timetables</p>
+            <div class="gc-icon">T</div>
+            <h3>{{ text('timetable') }}</h3>
+            <p>{{ text('manage_timetable_desc') }}</p>
             <div class="gc-count">{{ stats.totalCreneaux || 0 }}</div>
           </div>
         </div>
@@ -386,19 +386,19 @@
       <!-- ======= NOTES ======= -->
       <div *ngIf="activeTab === 'notes'" class="section-fade">
         <div class="data-card">
-          <h2 class="card-title">{{ t('admin.nav.grades') }}</h2>
+          <h2 class="card-title">{{ text('grades') }}</h2>
           <div class="table-wrap">
             <table>
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>{{ t('admin.stats.students') }}</th>
-                  <th>{{ t('manage.subjects') }}</th>
-                  <th>{{ t('admin.stats.professors') }}</th>
-                  <th>Evaluation</th>
-                  <th>Note / 20</th>
-                  <th>Status</th>
-                  <th>Date</th>
+                  <th>{{ text('students') }}</th>
+                  <th>{{ text('manage_subjects') }}</th>
+                  <th>{{ text('professors') }}</th>
+                  <th>{{ text('evaluation') }}</th>
+                  <th>{{ text('note20') }}</th>
+                  <th>{{ text('status') }}</th>
+                  <th>{{ text('date') }}</th>
                 </tr>
               </thead>
               <tbody>
@@ -406,18 +406,18 @@
                   <td class="td-muted">{{ note.id }}</td>
                   <td>{{ note.etudiant?.firstName }} {{ note.etudiant?.lastName }}</td>
                   <td>{{ note.matiere?.nom }}</td>
-                  <td>Pr. {{ note.professeur?.lastName }}</td>
+                  <td>{{ note.professeur?.lastName }}</td>
                   <td class="td-muted">{{ note.typeEvaluation }}</td>
                   <td><strong class="td-note">{{ note.valeur }}</strong></td>
                   <td>
                     <span class="badge" [ngClass]="note.valeur >= 10 ? 'badge-green' : 'badge-red'">
-                      {{ note.valeur >= 10 ? '✅ Validé' : '⚠️ Rattrapage' }}
+                      {{ note.valeur >= 10 ? text('passed') : text('retake') }}
                     </span>
                   </td>
                   <td class="td-muted">{{ note.dateSaisie | date:'dd/MM/yy' }}</td>
                 </tr>
                 <tr *ngIf="notes.length === 0">
-                  <td colspan="8" class="empty-row">No grades found</td>
+                  <td colspan="8" class="empty-row">{{ text('no_grades') }}</td>
                 </tr>
               </tbody>
             </table>
@@ -428,18 +428,18 @@
       <!-- ======= MESSAGES ======= -->
       <div *ngIf="activeTab === 'messages'" class="section-fade">
         <div class="data-card">
-          <h2 class="card-title">{{ t('admin.nav.messages') }} ({{ messages.length }})</h2>
+          <h2 class="card-title">{{ text('messages') }} ({{ messages.length }})</h2>
           <div class="table-wrap">
             <table>
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>User</th>
-                  <th>Message</th>
-                  <th>Response</th>
-                  <th>Intent</th>
-                  <th>Lang</th>
-                  <th>Date</th>
+                  <th>{{ text('user') }}</th>
+                  <th>{{ text('message') }}</th>
+                  <th>{{ text('response') }}</th>
+                  <th>{{ text('intent') }}</th>
+                  <th>{{ text('lang') }}</th>
+                  <th>{{ text('date') }}</th>
                 </tr>
               </thead>
               <tbody>
@@ -453,7 +453,7 @@
                   <td class="td-muted">{{ msg.createdAt | date:'dd/MM/yy HH:mm' }}</td>
                 </tr>
                 <tr *ngIf="messages.length === 0">
-                  <td colspan="7" class="empty-row">No messages found</td>
+                  <td colspan="7" class="empty-row">{{ text('no_messages') }}</td>
                 </tr>
               </tbody>
             </table>
@@ -464,18 +464,18 @@
       <!-- ======= DOCUMENTS ======= -->
       <div *ngIf="activeTab === 'documents'" class="section-fade">
         <div class="data-card">
-          <h2 class="card-title">{{ t('admin.nav.documents') }}</h2>
+          <h2 class="card-title">{{ text('documents') }}</h2>
           <div class="table-wrap">
             <table>
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>User</th>
-                  <th>Type</th>
-                  <th>Name</th>
-                  <th>Format</th>
-                  <th>Status</th>
-                  <th>Date</th>
+                  <th>{{ text('user') }}</th>
+                  <th>{{ text('type') }}</th>
+                  <th>{{ text('name') }}</th>
+                  <th>{{ text('format') }}</th>
+                  <th>{{ text('status') }}</th>
+                  <th>{{ text('date') }}</th>
                 </tr>
               </thead>
               <tbody>
@@ -489,7 +489,7 @@
                   <td class="td-muted">{{ doc.createdAt | date:'dd/MM/yy HH:mm' }}</td>
                 </tr>
                 <tr *ngIf="documents.length === 0">
-                  <td colspan="7" class="empty-row">No document requests</td>
+                  <td colspan="7" class="empty-row">{{ text('no_documents') }}</td>
                 </tr>
               </tbody>
             </table>

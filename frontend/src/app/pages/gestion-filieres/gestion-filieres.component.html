@@ -1,18 +1,18 @@
-<div class="content-scroll animate-fade">
+<div class="content-scroll animate-fade" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
   <header class="main-header glass-panel mb-24">
     <div class="h-left">
       <button class="icon-btn-sm" (click)="goBack()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
       </button>
       <div class="h-meta">
-        <h1>Gestion des Filières</h1>
-        <span class="h-status">{{ filieres.length }} filières enregistrées</span>
+        <h1>{{ text('title') }}</h1>
+        <span class="h-status">{{ filieres.length }} {{ text('count') }}</span>
       </div>
     </div>
     <button class="btn-submit" style="width: auto; padding: 10px 20px; margin: 0;" (click)="openAdd()">
       <span class="btn-content">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Nouvelle Filière
+        {{ text('new_item') }}
       </span>
     </button>
   </header>
@@ -30,46 +30,46 @@
   <!-- Form Panel -->
   <div class="data-card animate-fade mb-24" *ngIf="showForm">
     <div class="panel-header" style="padding: 0 0 20px 0; margin-bottom: 24px; border-bottom: 1px solid var(--border-light);">
-      <h3 style="margin: 0;">{{ editMode ? 'Modifier' : 'Ajouter' }} une filière</h3>
+      <h3 style="margin: 0;">{{ editMode ? text('edit_item') : text('add_item') }}</h3>
     </div>
     
     <div class="grid-2">
       <div class="form-group">
-        <label class="field-label">Nom *</label>
-        <input type="text" class="field-input" [(ngModel)]="nom" placeholder="Ex: Informatique">
+        <label class="field-label">{{ text('name') }} *</label>
+        <input type="text" class="field-input" [(ngModel)]="nom" [placeholder]="text('placeholder_name')">
       </div>
       <div class="form-group">
-        <label class="field-label">Code *</label>
-        <input type="text" class="field-input" [(ngModel)]="code" placeholder="Ex: INFO-L1">
+        <label class="field-label">{{ text('code') }} *</label>
+        <input type="text" class="field-input" [(ngModel)]="code" [placeholder]="text('placeholder_code')">
       </div>
       <div class="form-group mt-10">
-        <label class="field-label">Niveau</label>
+        <label class="field-label">{{ text('level') }}</label>
         <select class="field-select" [(ngModel)]="niveau">
-          <option value="">Sélectionner</option>
-          <option value="Licence 1">Licence 1</option>
-          <option value="Licence 2">Licence 2</option>
-          <option value="Licence 3">Licence 3</option>
-          <option value="Master 1">Master 1</option>
-          <option value="Master 2">Master 2</option>
+          <option value="">{{ text('select') }}</option>
+          <option value="Licence 1">{{ getLevelLabel('Licence 1') }}</option>
+          <option value="Licence 2">{{ getLevelLabel('Licence 2') }}</option>
+          <option value="Licence 3">{{ getLevelLabel('Licence 3') }}</option>
+          <option value="Master 1">{{ getLevelLabel('Master 1') }}</option>
+          <option value="Master 2">{{ getLevelLabel('Master 2') }}</option>
         </select>
       </div>
       <div class="form-group mt-10">
-        <label class="field-label">Département</label>
-        <input type="text" class="field-input" [(ngModel)]="departement" placeholder="Ex: Sciences">
+        <label class="field-label">{{ text('department') }}</label>
+        <input type="text" class="field-input" [(ngModel)]="departement" [placeholder]="text('placeholder_department')">
       </div>
       <div class="form-group mt-10">
-        <label class="field-label">Capacité max</label>
-        <input type="number" class="field-input" [(ngModel)]="capaciteMax" placeholder="Ex: 40">
+        <label class="field-label">{{ text('capacity') }}</label>
+        <input type="number" class="field-input" [(ngModel)]="capaciteMax" [placeholder]="text('placeholder_capacity')">
       </div>
       <div class="form-group mt-10">
-        <label class="field-label">Description</label>
-        <textarea class="field-input" [(ngModel)]="description" placeholder="Description de la filière..." rows="2"></textarea>
+        <label class="field-label">{{ text('description') }}</label>
+        <textarea class="field-input" [(ngModel)]="description" [placeholder]="text('placeholder_description')" rows="2"></textarea>
       </div>
     </div>
 
     <div class="form-row mt-20" style="padding-top: 24px; border-top: 1px solid var(--border-light); display: flex; justify-content: flex-end; gap: 12px;">
-      <button class="action-btn" (click)="cancel()">Annuler</button>
-      <button class="btn-submit" style="width: auto; margin: 0;" (click)="save()">Sauvegarder</button>
+      <button class="action-btn" (click)="cancel()">{{ text('cancel') }}</button>
+      <button class="btn-submit" style="width: auto; margin: 0;" (click)="save()">{{ text('save') }}</button>
     </div>
   </div>
 
@@ -79,21 +79,21 @@
       <table>
         <thead>
           <tr>
-            <th>Nom</th>
-            <th>Code</th>
-            <th>Niveau</th>
-            <th>Département</th>
-            <th>Capacité</th>
-            <th>Actions</th>
+            <th>{{ text('name') }}</th>
+            <th>{{ text('code') }}</th>
+            <th>{{ text('level') }}</th>
+            <th>{{ text('department') }}</th>
+            <th>{{ text('capacity') }}</th>
+            <th>{{ text('actions') }}</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let f of filieres">
             <td><strong>{{ f.nom }}</strong></td>
             <td><code class="badge badge-blue">{{ f.code }}</code></td>
-            <td><span class="badge badge-purple">{{ f.niveau || '—' }}</span></td>
-            <td>{{ f.departement || '—' }}</td>
-            <td>{{ f.capaciteMax || '—' }}</td>
+            <td><span class="badge badge-purple">{{ f.niveau ? getLevelLabel(f.niveau) : text('empty_dash') }}</span></td>
+            <td>{{ f.departement || text('empty_dash') }}</td>
+            <td>{{ f.capaciteMax || text('empty_dash') }}</td>
             <td>
               <div class="msg-actions">
                 <button class="m-btn" (click)="openEdit(f)">
@@ -106,7 +106,7 @@
             </td>
           </tr>
           <tr *ngIf="filieres.length === 0">
-            <td colspan="6" class="empty-row">Aucune filière enregistrée</td>
+            <td colspan="6" class="empty-row">{{ text('empty') }}</td>
           </tr>
         </tbody>
       </table>
